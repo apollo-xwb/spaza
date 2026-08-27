@@ -1,0 +1,5500 @@
+{
+  "national": {
+    "totalShops": 6927,
+    "totalActivations": 30136,
+    "avgActivations": 4.3505124873682695,
+    "medianActivations": 4,
+    "verifiedAddressPct": 94.9761801645734,
+    "provinces": 9,
+    "cities": 576,
+    "shopTypeCategories": 13
+  },
+  "byProvince": [
+    {
+      "province": "Limpopo",
+      "count": 985,
+      "totalActivations": 4235,
+      "avgActivations": 4.299492385786802,
+      "verifiedAddressPct": 93.6040609137056
+    },
+    {
+      "province": "Free State",
+      "count": 970,
+      "totalActivations": 4132,
+      "avgActivations": 4.25979381443299,
+      "verifiedAddressPct": 94.5360824742268
+    },
+    {
+      "province": "North West",
+      "count": 968,
+      "totalActivations": 4011,
+      "avgActivations": 4.143595041322314,
+      "verifiedAddressPct": 97.72727272727273
+    },
+    {
+      "province": "Northern Cape",
+      "count": 957,
+      "totalActivations": 4246,
+      "avgActivations": 4.436781609195402,
+      "verifiedAddressPct": 94.77533960292581
+    },
+    {
+      "province": "Mpumalanga",
+      "count": 929,
+      "totalActivations": 4133,
+      "avgActivations": 4.448869752421959,
+      "verifiedAddressPct": 96.87836383207751
+    },
+    {
+      "province": "Gauteng",
+      "count": 894,
+      "totalActivations": 3928,
+      "avgActivations": 4.3937360178970915,
+      "verifiedAddressPct": 92.05816554809843
+    },
+    {
+      "province": "KwaZulu-Natal",
+      "count": 721,
+      "totalActivations": 3067,
+      "avgActivations": 4.253814147018031,
+      "verifiedAddressPct": 94.86823855755895
+    },
+    {
+      "province": "Western Cape",
+      "count": 337,
+      "totalActivations": 1612,
+      "avgActivations": 4.783382789317508,
+      "verifiedAddressPct": 99.10979228486647
+    },
+    {
+      "province": "Eastern Cape",
+      "count": 166,
+      "totalActivations": 772,
+      "avgActivations": 4.650602409638554,
+      "verifiedAddressPct": 87.95180722891565
+    }
+  ],
+  "byCity": [
+    {
+      "city": "P",
+      "province": "Limpopo",
+      "count": 281,
+      "avgActivations": 4.313167259786477,
+      "lat": -23.86984007886122,
+      "lng": 9.49466543726801
+    },
+    {
+      "city": "C",
+      "province": "Gauteng",
+      "count": 224,
+      "avgActivations": 4.526785714285714,
+      "lat": -25.77328354464286,
+      "lng": 8.108214212267066
+    },
+    {
+      "city": "Greater Tubatse",
+      "province": "Limpopo",
+      "count": 193,
+      "avgActivations": 4.683937823834197,
+      "lat": -24.71527872927463,
+      "lng": 0.17414304354888874
+    },
+    {
+      "city": "S",
+      "province": "Northern Cape",
+      "count": 179,
+      "avgActivations": 4.340782122905028,
+      "lat": -28.68625144089383,
+      "lng": 4.656745111676094
+    },
+    {
+      "city": "G",
+      "province": "Limpopo",
+      "count": 177,
+      "avgActivations": 4.19774011299435,
+      "lat": -24.592476778305087,
+      "lng": 1.993515106117375
+    },
+    {
+      "city": "Sol Plaatje",
+      "province": "Northern Cape",
+      "count": 161,
+      "avgActivations": 4.3354037267080745,
+      "lat": -28.730797246086972,
+      "lng": 4.752585171837178
+    },
+    {
+      "city": "U",
+      "province": "Northern Cape",
+      "count": 159,
+      "avgActivations": 4.440251572327044,
+      "lat": -28.447873992327043,
+      "lng": 1.2204205991548331
+    },
+    {
+      "city": "G",
+      "province": "Mpumalanga",
+      "count": 158,
+      "avgActivations": 4.544303797468355,
+      "lat": -26.528611924810132,
+      "lng": 9.161976990214042
+    },
+    {
+      "city": "M",
+      "province": "North West",
+      "count": 147,
+      "avgActivations": 3.9183673469387754,
+      "lat": -25.90802401306124,
+      "lng": 7.484834323456016
+    },
+    {
+      "city": "S",
+      "province": "Free State",
+      "count": 138,
+      "avgActivations": 4.130434782608695,
+      "lat": -28.719635464492768,
+      "lng": 7.680008041366294
+    },
+    {
+      "city": "B",
+      "province": "Free State",
+      "count": 127,
+      "avgActivations": 4.283464566929134,
+      "lat": -29.174454168346458,
+      "lng": 6.3070586890744496
+    },
+    {
+      "city": "C",
+      "province": "Western Cape",
+      "count": 125,
+      "avgActivations": 4.664,
+      "lat": -33.957748317920014,
+      "lng": 8.67480563668328
+    },
+    {
+      "city": "M",
+      "province": "Mpumalanga",
+      "count": 123,
+      "avgActivations": 4.203252032520325,
+      "lat": -26.09430344105692,
+      "lng": 7.169084475970019
+    },
+    {
+      "city": "N",
+      "province": "KwaZulu-Natal",
+      "count": 119,
+      "avgActivations": 3.966386554621849,
+      "lat": -27.82790835957984,
+      "lng": 0.19507421607450356
+    },
+    {
+      "city": "M",
+      "province": "Limpopo",
+      "count": 109,
+      "avgActivations": 3.963302752293578,
+      "lat": -24.43594412724769,
+      "lng": 8.858437390828488
+    },
+    {
+      "city": "P",
+      "province": "North West",
+      "count": 108,
+      "avgActivations": 3.4444444444444446,
+      "lat": -26.734890489629638,
+      "lng": 7.031466498841717
+    },
+    {
+      "city": "e",
+      "province": "Mpumalanga",
+      "count": 103,
+      "avgActivations": 4.87378640776699,
+      "lat": -25.86817171941748,
+      "lng": 9.151302660875686
+    },
+    {
+      "city": "e",
+      "province": "KwaZulu-Natal",
+      "count": 102,
+      "avgActivations": 4.323529411764706,
+      "lat": -29.868429021960782,
+      "lng": 0.8911582900450955
+    },
+    {
+      "city": "M",
+      "province": "Free State",
+      "count": 98,
+      "avgActivations": 4.224489795918367,
+      "lat": -28.42213738714287,
+      "lng": 7.461791513110684
+    },
+    {
+      "city": "R",
+      "province": "North West",
+      "count": 94,
+      "avgActivations": 3.9361702127659575,
+      "lat": -25.61894848787233,
+      "lng": 7.248615493845512
+    },
+    {
+      "city": "D",
+      "province": "Free State",
+      "count": 92,
+      "avgActivations": 3.902173913043478,
+      "lat": -28.296619128695646,
+      "lng": 8.295684752046668
+    },
+    {
+      "city": "S",
+      "province": "Mpumalanga",
+      "count": 87,
+      "avgActivations": 4.114942528735632,
+      "lat": -26.092029175172406,
+      "lng": 9.390736146875582
+    },
+    {
+      "city": "P",
+      "province": "Northern Cape",
+      "count": 84,
+      "avgActivations": 4.488095238095238,
+      "lat": -27.80053159659523,
+      "lng": 4.7671637927831565
+    },
+    {
+      "city": "City of Ekurhuleni",
+      "province": "Gauteng",
+      "count": 83,
+      "avgActivations": 4.626506024096385,
+      "lat": -26.31830357373494,
+      "lng": 8.161937689422802
+    },
+    {
+      "city": "BotshabeloBotsh",
+      "province": "Free State",
+      "count": 80,
+      "avgActivations": 4.375,
+      "lat": -29.240947625249998,
+      "lng": 6.711583834374094
+    },
+    {
+      "city": "eThekwini",
+      "province": "KwaZulu-Natal",
+      "count": 79,
+      "avgActivations": 4.012658227848101,
+      "lat": -29.83117653949368,
+      "lng": 0.9049405261289342
+    },
+    {
+      "city": "KlerksdorpNuwedorp",
+      "province": "North West",
+      "count": 75,
+      "avgActivations": 4.48,
+      "lat": -26.865962580533335,
+      "lng": 6.6648541650966715
+    },
+    {
+      "city": "T",
+      "province": "Mpumalanga",
+      "count": 73,
+      "avgActivations": 4.671232876712328,
+      "lat": -25.112677965205478,
+      "lng": 0.894228025929169
+    },
+    {
+      "city": "E",
+      "province": "Mpumalanga",
+      "count": 70,
+      "avgActivations": 4.614285714285714,
+      "lat": -25.018702691285725,
+      "lng": 0.9506783140910191
+    },
+    {
+      "city": "Dihlabeng",
+      "province": "Free State",
+      "count": 66,
+      "avgActivations": 4.2272727272727275,
+      "lat": -28.237345289090907,
+      "lng": 8.326705681121483
+    },
+    {
+      "city": "K",
+      "province": "Northern Cape",
+      "count": 64,
+      "avgActivations": 4.46875,
+      "lat": -28.723932688749994,
+      "lng": 3.99901392264288
+    },
+    {
+      "city": "City of Tshwane",
+      "province": "Gauteng",
+      "count": 64,
+      "avgActivations": 5.09375,
+      "lat": -25.445578102812505,
+      "lng": 8.196472121948744
+    },
+    {
+      "city": "I",
+      "province": "Eastern Cape",
+      "count": 60,
+      "avgActivations": 4,
+      "lat": -31.153459949333335,
+      "lng": 9.521273105756656
+    },
+    {
+      "city": "M",
+      "province": "Eastern Cape",
+      "count": 59,
+      "avgActivations": 5.033898305084746,
+      "lat": -30.937530648813553,
+      "lng": 8.31530246414869
+    },
+    {
+      "city": "V",
+      "province": "North West",
+      "count": 58,
+      "avgActivations": 4.896551724137931,
+      "lat": -26.32236966206896,
+      "lng": 6.808251544172912
+    },
+    {
+      "city": "G",
+      "province": "Northern Cape",
+      "count": 56,
+      "avgActivations": 4.464285714285714,
+      "lat": -27.418873746071426,
+      "lng": 3.446060994660688
+    },
+    {
+      "city": "K",
+      "province": "North West",
+      "count": 54,
+      "avgActivations": 4.592592592592593,
+      "lat": -26.839109682222244,
+      "lng": 6.610594692942093
+    },
+    {
+      "city": "T",
+      "province": "Gauteng",
+      "count": 53,
+      "avgActivations": 3.7358490566037736,
+      "lat": -25.60627745433962,
+      "lng": 8.111618517489683
+    },
+    {
+      "city": "Thaba Chweu",
+      "province": "Mpumalanga",
+      "count": 49,
+      "avgActivations": 5,
+      "lat": -25.084086215510204,
+      "lng": 0.4263842955140381
+    },
+    {
+      "city": "Govan Mbeki",
+      "province": "Mpumalanga",
+      "count": 47,
+      "avgActivations": 4.659574468085107,
+      "lat": -26.482028260851063,
+      "lng": 9.387637846294817
+    },
+    {
+      "city": "BloemfonteinFre",
+      "province": "Free State",
+      "count": 47,
+      "avgActivations": 4.404255319148936,
+      "lat": -29.173294539574457,
+      "lng": 6.248475684692516
+    },
+    {
+      "city": "Phokwane",
+      "province": "Northern Cape",
+      "count": 45,
+      "avgActivations": 4.644444444444445,
+      "lat": -27.82223880715555,
+      "lng": 4.728571209735292
+    },
+    {
+      "city": "S",
+      "province": "KwaZulu-Natal",
+      "count": 45,
+      "avgActivations": 4.266666666666667,
+      "lat": -29.215541974666667,
+      "lng": 1.2962709741492164
+    },
+    {
+      "city": "D",
+      "province": "North West",
+      "count": 44,
+      "avgActivations": 4.181818181818182,
+      "lat": -26.200465700909096,
+      "lng": 6.238048061461812
+    },
+    {
+      "city": "M",
+      "province": "Northern Cape",
+      "count": 43,
+      "avgActivations": 5.325581395348837,
+      "lat": -28.118792037674417,
+      "lng": 4.850556621107984
+    },
+    {
+      "city": "S",
+      "province": "Gauteng",
+      "count": 41,
+      "avgActivations": 4.2926829268292686,
+      "lat": -26.131154337073173,
+      "lng": 7.939689015661091
+    },
+    {
+      "city": "Du NoonWestern",
+      "province": "Western Cape",
+      "count": 36,
+      "avgActivations": 4.333333333333333,
+      "lat": -33.816376825833345,
+      "lng": 8.540360945677016
+    },
+    {
+      "city": "Albert Luthuli",
+      "province": "Mpumalanga",
+      "count": 35,
+      "avgActivations": 4.542857142857143,
+      "lat": -26.079549368285715,
+      "lng": 0.11295571558567856
+    },
+    {
+      "city": "City of Johannesburg",
+      "province": "Gauteng",
+      "count": 34,
+      "avgActivations": 4.205882352941177,
+      "lat": -26.329640748823532,
+      "lng": 7.9058929725406815
+    },
+    {
+      "city": "A",
+      "province": "KwaZulu-Natal",
+      "count": 34,
+      "avgActivations": 5.0588235294117645,
+      "lat": -27.822705281176468,
+      "lng": 0.7910332436110717
+    },
+    {
+      "city": "B",
+      "province": "Limpopo",
+      "count": 33,
+      "avgActivations": 4,
+      "lat": -24.89545528545454,
+      "lng": 8.31661021199733
+    },
+    {
+      "city": "PolokwaneSeshego",
+      "province": "Limpopo",
+      "count": 32,
+      "avgActivations": 4.4375,
+      "lat": -23.849824846874995,
+      "lng": 9.389128954988184
+    },
+    {
+      "city": "T",
+      "province": "North West",
+      "count": 32,
+      "avgActivations": 4.84375,
+      "lat": -26.690058921874996,
+      "lng": 6.935999808271333
+    },
+    {
+      "city": "MsukaligwaCassi",
+      "province": "Mpumalanga",
+      "count": 31,
+      "avgActivations": 5,
+      "lat": -26.517242929032264,
+      "lng": 9.97215697646229
+    },
+    {
+      "city": "Maluti-a-Phofung",
+      "province": "Free State",
+      "count": 31,
+      "avgActivations": 5.451612903225806,
+      "lat": -28.44317529354839,
+      "lng": 8.90709962065092
+    },
+    {
+      "city": "MfuleniWestern",
+      "province": "Western Cape",
+      "count": 29,
+      "avgActivations": 5.172413793103448,
+      "lat": -33.99303942586207,
+      "lng": 8.678758402372628
+    },
+    {
+      "city": "MsukaligwaWesselton",
+      "province": "Mpumalanga",
+      "count": 29,
+      "avgActivations": 4.068965517241379,
+      "lat": -26.509928236551723,
+      "lng": 9.970439298888865
+    },
+    {
+      "city": "Polokwane",
+      "province": "Limpopo",
+      "count": 29,
+      "avgActivations": 5.103448275862069,
+      "lat": -23.775017142068965,
+      "lng": 9.338130873471787
+    },
+    {
+      "city": "Ditsobotla",
+      "province": "North West",
+      "count": 29,
+      "avgActivations": 4.758620689655173,
+      "lat": -26.161292809655176,
+      "lng": 6.158068914474429
+    },
+    {
+      "city": "u",
+      "province": "KwaZulu-Natal",
+      "count": 27,
+      "avgActivations": 4.2592592592592595,
+      "lat": -28.893558917407404,
+      "lng": 2.3797738909075665
+    },
+    {
+      "city": "N",
+      "province": "Free State",
+      "count": 26,
+      "avgActivations": 4.3076923076923075,
+      "lat": -27.802249026153845,
+      "lng": 8.440918806045877
+    },
+    {
+      "city": "Moretele",
+      "province": "North West",
+      "count": 26,
+      "avgActivations": 4.653846153846154,
+      "lat": -25.28785257692308,
+      "lng": 8.201316281163459
+    },
+    {
+      "city": "Rustenburg",
+      "province": "North West",
+      "count": 26,
+      "avgActivations": 3.8076923076923075,
+      "lat": -25.57824466384616,
+      "lng": 7.151987606170109
+    },
+    {
+      "city": "RoodepoortCosmo City",
+      "province": "Gauteng",
+      "count": 26,
+      "avgActivations": 4.153846153846154,
+      "lat": -26.025888926153854,
+      "lng": 7.925683548608276
+    },
+    {
+      "city": "Madibeng",
+      "province": "North West",
+      "count": 25,
+      "avgActivations": 3.88,
+      "lat": -25.5559432784,
+      "lng": 7.955677451863218
+    },
+    {
+      "city": "E",
+      "province": "KwaZulu-Natal",
+      "count": 24,
+      "avgActivations": 5,
+      "lat": -28.62468710541667,
+      "lng": 7.9046641650492395
+    },
+    {
+      "city": "BloemfonteinTur",
+      "province": "Free State",
+      "count": 23,
+      "avgActivations": 2.608695652173913,
+      "lat": -29.184692330434785,
+      "lng": 6.261726498459537
+    },
+    {
+      "city": "Ç",
+      "province": "Northern Cape",
+      "count": 22,
+      "avgActivations": 4.545454545454546,
+      "lat": -28.44460890090909,
+      "lng": 1.2150854346678408
+    },
+    {
+      "city": "D",
+      "province": "Northern Cape",
+      "count": 22,
+      "avgActivations": 2.909090909090909,
+      "lat": -28.53447382818182,
+      "lng": 4.504890713145428
+    },
+    {
+      "city": "Tsantsabane",
+      "province": "Northern Cape",
+      "count": 22,
+      "avgActivations": 5.318181818181818,
+      "lat": -28.321455091818187,
+      "lng": 3.054240060072891
+    },
+    {
+      "city": "R",
+      "province": "Gauteng",
+      "count": 21,
+      "avgActivations": 4.9523809523809526,
+      "lat": -26.172244311428575,
+      "lng": 7.788860404265891
+    },
+    {
+      "city": "J",
+      "province": "Gauteng",
+      "count": 21,
+      "avgActivations": 4.095238095238095,
+      "lat": -26.243680763809525,
+      "lng": 7.982023916059568
+    },
+    {
+      "city": "BloemfonteinRoc",
+      "province": "Free State",
+      "count": 20,
+      "avgActivations": 4,
+      "lat": -29.180957980000006,
+      "lng": 6.251384463161787
+    },
+    {
+      "city": "BloemfonteinBoc",
+      "province": "Free State",
+      "count": 20,
+      "avgActivations": 5.15,
+      "lat": -29.140847793000006,
+      "lng": 6.235249719554188
+    },
+    {
+      "city": "G",
+      "province": "North West",
+      "count": 20,
+      "avgActivations": 3.7,
+      "lat": -27.553159391,
+      "lng": 4.757392675052756
+    },
+    {
+      "city": "RustenburgPaard",
+      "province": "North West",
+      "count": 19,
+      "avgActivations": 4,
+      "lat": -25.63145632,
+      "lng": 7.2803394084747115
+    },
+    {
+      "city": "Capricorn District MunicipalityBlouberg",
+      "province": "Limpopo",
+      "count": 18,
+      "avgActivations": 4.055555555555555,
+      "lat": -23.287182017777777,
+      "lng": 9.138547578056306
+    },
+    {
+      "city": "DurbanWiggins",
+      "province": "KwaZulu-Natal",
+      "count": 18,
+      "avgActivations": 5.055555555555555,
+      "lat": -29.851749548888886,
+      "lng": 0.9727046453024806
+    },
+    {
+      "city": "Steve Tshwete",
+      "province": "Mpumalanga",
+      "count": 17,
+      "avgActivations": 2.823529411764706,
+      "lat": -26.01287777176471,
+      "lng": 9.654407385234501
+    },
+    {
+      "city": "BloemfonteinSonskyn",
+      "province": "Free State",
+      "count": 17,
+      "avgActivations": 3.0588235294117645,
+      "lat": -29.165501722352946,
+      "lng": 6.272817859396311
+    },
+    {
+      "city": "T",
+      "province": "Northern Cape",
+      "count": 16,
+      "avgActivations": 3.5625,
+      "lat": -28.25799063875,
+      "lng": 3.086010142289549
+    },
+    {
+      "city": "Moqhaka",
+      "province": "Free State",
+      "count": 16,
+      "avgActivations": 4.75,
+      "lat": -27.65045237625,
+      "lng": 7.207147450390339
+    },
+    {
+      "city": "BloemfonteinBatho",
+      "province": "Free State",
+      "count": 16,
+      "avgActivations": 3.625,
+      "lat": -29.1337289,
+      "lng": 6.229743357085954
+    },
+    {
+      "city": "NewcastleNewcas",
+      "province": "KwaZulu-Natal",
+      "count": 16,
+      "avgActivations": 4.5625,
+      "lat": -27.7575927225,
+      "lng": 9.93283875306523
+    },
+    {
+      "city": "RustenburgRuste",
+      "province": "North West",
+      "count": 15,
+      "avgActivations": 5.066666666666666,
+      "lat": -25.653240998666664,
+      "lng": 7.233708965956406
+    },
+    {
+      "city": "Dr Kenneth Kaun",
+      "province": "North West",
+      "count": 15,
+      "avgActivations": 3.466666666666667,
+      "lat": -26.317830609333335,
+      "lng": 6.822736275327142
+    },
+    {
+      "city": "K",
+      "province": "Gauteng",
+      "count": 15,
+      "avgActivations": 4.133333333333334,
+      "lat": -26.108576517333333,
+      "lng": 7.817881517569885
+    },
+    {
+      "city": "PolokwaneNew Pi",
+      "province": "Limpopo",
+      "count": 14,
+      "avgActivations": 3.7857142857142856,
+      "lat": -23.890420688571428,
+      "lng": 9.417695393450902
+    },
+    {
+      "city": "PolokwaneWesternburg",
+      "province": "Limpopo",
+      "count": 14,
+      "avgActivations": 5.571428571428571,
+      "lat": -23.91033486714286,
+      "lng": 9.42726484028721
+    },
+    {
+      "city": "RustenburgTlhabane",
+      "province": "North West",
+      "count": 14,
+      "avgActivations": 2.7857142857142856,
+      "lat": -25.643494488571427,
+      "lng": 7.218738916396542
+    },
+    {
+      "city": "BloemfonteinBlo",
+      "province": "Free State",
+      "count": 13,
+      "avgActivations": 3.923076923076923,
+      "lat": -29.158468756923074,
+      "lng": 6.265470981157658
+    },
+    {
+      "city": "BloemfonteinJoe",
+      "province": "Free State",
+      "count": 13,
+      "avgActivations": 4.384615384615385,
+      "lat": -29.150421753846153,
+      "lng": 6.249285016472585
+    },
+    {
+      "city": "RustenburgZinni",
+      "province": "North West",
+      "count": 13,
+      "avgActivations": 3.230769230769231,
+      "lat": -25.644912766153855,
+      "lng": 7.236815370538677
+    },
+    {
+      "city": "Randfontein",
+      "province": "Gauteng",
+      "count": 13,
+      "avgActivations": 3.6153846153846154,
+      "lat": -26.20501391692308,
+      "lng": 7.701095893948262
+    },
+    {
+      "city": "Abaqulusi",
+      "province": "KwaZulu-Natal",
+      "count": 13,
+      "avgActivations": 2.3076923076923075,
+      "lat": -27.83321453076923,
+      "lng": 0.7934025543357623
+    },
+    {
+      "city": "SpazaeThekwini",
+      "province": "KwaZulu-Natal",
+      "count": 13,
+      "avgActivations": 5,
+      "lat": -29.690401922307686,
+      "lng": 0.9942630419678706
+    },
+    {
+      "city": "SpazaSol Plaatje",
+      "province": "Northern Cape",
+      "count": 12,
+      "avgActivations": 4,
+      "lat": -28.723037914999995,
+      "lng": 4.73678613506643
+    },
+    {
+      "city": "Sunbird ParkWes",
+      "province": "Western Cape",
+      "count": 12,
+      "avgActivations": 4.25,
+      "lat": -33.969407018333335,
+      "lng": 8.685320450698269
+    },
+    {
+      "city": "T",
+      "province": "Free State",
+      "count": 12,
+      "avgActivations": 5.583333333333333,
+      "lat": -29.195785639999997,
+      "lng": 6.831036916324426
+    },
+    {
+      "city": "Emfuleni",
+      "province": "Gauteng",
+      "count": 12,
+      "avgActivations": 2.8333333333333335,
+      "lat": -26.692575631666667,
+      "lng": 7.838819881240902
+    },
+    {
+      "city": "M",
+      "province": "KwaZulu-Natal",
+      "count": 12,
+      "avgActivations": 4.75,
+      "lat": -28.594572458333342,
+      "lng": 1.7778433884917921
+    },
+    {
+      "city": "W",
+      "province": "Free State",
+      "count": 11,
+      "avgActivations": 4,
+      "lat": -27.96091984363636,
+      "lng": 6.813425772676305
+    },
+    {
+      "city": "L",
+      "province": "North West",
+      "count": 11,
+      "avgActivations": 4.909090909090909,
+      "lat": -27.907431609090906,
+      "lng": 5.159531223478045
+    },
+    {
+      "city": "RustenburgBobuampsa",
+      "province": "North West",
+      "count": 11,
+      "avgActivations": 3.3636363636363638,
+      "lat": -25.615584354545454,
+      "lng": 7.193072891046282
+    },
+    {
+      "city": "SowetoSoteba",
+      "province": "Gauteng",
+      "count": 11,
+      "avgActivations": 2.727272727272727,
+      "lat": -26.205149436363637,
+      "lng": 7.868303882416412
+    },
+    {
+      "city": "S",
+      "province": "Western Cape",
+      "count": 10,
+      "avgActivations": 4.8,
+      "lat": -33.879013728,
+      "lng": 8.85349245929007
+    },
+    {
+      "city": "SpazaBloemfonte",
+      "province": "Free State",
+      "count": 10,
+      "avgActivations": 3.7,
+      "lat": -29.173762666000005,
+      "lng": 6.245086903876289
+    },
+    {
+      "city": "D",
+      "province": "KwaZulu-Natal",
+      "count": 10,
+      "avgActivations": 5.2,
+      "lat": -29.243542830000003,
+      "lng": 0.7243733506194314
+    },
+    {
+      "city": "SpazauMhlathuze",
+      "province": "KwaZulu-Natal",
+      "count": 10,
+      "avgActivations": 4.1,
+      "lat": -28.744245319999997,
+      "lng": 1.9399026522891787
+    },
+    {
+      "city": "GuguletuWestern",
+      "province": "Western Cape",
+      "count": 9,
+      "avgActivations": 4,
+      "lat": -33.98417246444445,
+      "lng": 8.568826880374809
+    },
+    {
+      "city": "Emakhazeni",
+      "province": "Mpumalanga",
+      "count": 9,
+      "avgActivations": 2.7777777777777777,
+      "lat": -25.557542035555556,
+      "lng": 5.592374849453947
+    },
+    {
+      "city": "S",
+      "province": "Limpopo",
+      "count": 9,
+      "avgActivations": 2.7777777777777777,
+      "lat": -24.452132474444447,
+      "lng": 8.251672655575568
+    },
+    {
+      "city": "SpazaBotshabelo",
+      "province": "Free State",
+      "count": 9,
+      "avgActivations": 4.777777777777778,
+      "lat": -29.267895775555555,
+      "lng": 6.720822126070146
+    },
+    {
+      "city": "Ventersdorp",
+      "province": "North West",
+      "count": 9,
+      "avgActivations": 4.333333333333333,
+      "lat": -26.31668441333333,
+      "lng": 6.807405658948733
+    },
+    {
+      "city": "M",
+      "province": "Gauteng",
+      "count": 9,
+      "avgActivations": 3.6666666666666665,
+      "lat": -26.252788968888886,
+      "lng": 7.887660131963061
+    },
+    {
+      "city": "E",
+      "province": "Gauteng",
+      "count": 9,
+      "avgActivations": 5.111111111111111,
+      "lat": -26.31940365111111,
+      "lng": 8.217577722054537
+    },
+    {
+      "city": "Palm Ridge",
+      "province": "Gauteng",
+      "count": 9,
+      "avgActivations": 5,
+      "lat": -26.388524739999998,
+      "lng": 8.140506485188697
+    },
+    {
+      "city": "Maphanga",
+      "province": "Gauteng",
+      "count": 9,
+      "avgActivations": 3.4444444444444446,
+      "lat": -26.31466503555556,
+      "lng": 8.14935354136
+    },
+    {
+      "city": "P",
+      "province": "Gauteng",
+      "count": 9,
+      "avgActivations": 5.111111111111111,
+      "lat": -25.759883575555552,
+      "lng": 8.11478915602062
+    },
+    {
+      "city": "Newcastle",
+      "province": "KwaZulu-Natal",
+      "count": 9,
+      "avgActivations": 5.777777777777778,
+      "lat": -27.764352556666665,
+      "lng": 0.12979199003964223
+    },
+    {
+      "city": "Kai !Garib",
+      "province": "Northern Cape",
+      "count": 8,
+      "avgActivations": 3.625,
+      "lat": -28.7900309825,
+      "lng": 0.6300827140863875
+    },
+    {
+      "city": "Victoria Mxenge",
+      "province": "Western Cape",
+      "count": 8,
+      "avgActivations": 5.625,
+      "lat": -34.02234469625,
+      "lng": 8.66004748885881
+    },
+    {
+      "city": "Dr JS Moroka",
+      "province": "Mpumalanga",
+      "count": 8,
+      "avgActivations": 4,
+      "lat": -25.121868895,
+      "lng": 9.039170511510648
+    },
+    {
+      "city": "D",
+      "province": "Mpumalanga",
+      "count": 8,
+      "avgActivations": 2.375,
+      "lat": -25.1139314075,
+      "lng": 9.055997038683701
+    },
+    {
+      "city": "MbombelaPienaar",
+      "province": "Mpumalanga",
+      "count": 8,
+      "avgActivations": 4.5,
+      "lat": -25.41295422625,
+      "lng": 1.1657111433397813
+    },
+    {
+      "city": "eMalahleniVosman",
+      "province": "Mpumalanga",
+      "count": 8,
+      "avgActivations": 5.5,
+      "lat": -25.870418259999997,
+      "lng": 9.131763826512287
+    },
+    {
+      "city": "PolokwaneNirvana",
+      "province": "Limpopo",
+      "count": 8,
+      "avgActivations": 4.375,
+      "lat": -23.9172182875,
+      "lng": 9.425328442492333
+    },
+    {
+      "city": "BloemfonteinHeidedal",
+      "province": "Free State",
+      "count": 8,
+      "avgActivations": 5.375,
+      "lat": -29.1521355275,
+      "lng": 6.2754787916727635
+    },
+    {
+      "city": "BloemfonteinBlomanda",
+      "province": "Free State",
+      "count": 8,
+      "avgActivations": 5.25,
+      "lat": -29.200215065000002,
+      "lng": 6.224977959482372
+    },
+    {
+      "city": "Lekwa-Teemane",
+      "province": "North West",
+      "count": 8,
+      "avgActivations": 5.375,
+      "lat": -27.8957666575,
+      "lng": 5.124145260605711
+    },
+    {
+      "city": "Matlosana",
+      "province": "North West",
+      "count": 8,
+      "avgActivations": 3.625,
+      "lat": -26.8518247225,
+      "lng": 6.562304230100499
+    },
+    {
+      "city": "S",
+      "province": "North West",
+      "count": 8,
+      "avgActivations": 2.5,
+      "lat": -25.613929505,
+      "lng": 7.2440106117737
+    },
+    {
+      "city": "KlerksdorpJouberton",
+      "province": "North West",
+      "count": 8,
+      "avgActivations": 7,
+      "lat": -26.892602744999998,
+      "lng": 6.616843982441779
+    },
+    {
+      "city": "W",
+      "province": "Gauteng",
+      "count": 8,
+      "avgActivations": 5.625,
+      "lat": -26.287582097500003,
+      "lng": 7.696809219480126
+    },
+    {
+      "city": "uMhlathuze",
+      "province": "KwaZulu-Natal",
+      "count": 8,
+      "avgActivations": 4.5,
+      "lat": -28.7972591925,
+      "lng": 1.9056815416188977
+    },
+    {
+      "city": "UpingtonProgress",
+      "province": "Northern Cape",
+      "count": 7,
+      "avgActivations": 3.7142857142857144,
+      "lat": -28.45892904857143,
+      "lng": 1.2238801329918856
+    },
+    {
+      "city": "EikendalWestern",
+      "province": "Western Cape",
+      "count": 7,
+      "avgActivations": 3.4285714285714284,
+      "lat": -33.85481181,
+      "lng": 8.725278319347977
+    },
+    {
+      "city": "A",
+      "province": "Mpumalanga",
+      "count": 7,
+      "avgActivations": 3.5714285714285716,
+      "lat": -26.091589682857144,
+      "lng": 0.12253477196616426
+    },
+    {
+      "city": "Ehlanzeni Distr",
+      "province": "Mpumalanga",
+      "count": 7,
+      "avgActivations": 4.285714285714286,
+      "lat": -24.73348219714286,
+      "lng": 1.0911378802589644
+    },
+    {
+      "city": "PolokwaneBlood River",
+      "province": "Limpopo",
+      "count": 7,
+      "avgActivations": 1.7142857142857142,
+      "lat": -23.822942705714286,
+      "lng": 9.368830075611063
+    },
+    {
+      "city": "L",
+      "province": "Limpopo",
+      "count": 7,
+      "avgActivations": 3.4285714285714284,
+      "lat": -24.31040187428572,
+      "lng": 9.481258697601422
+    },
+    {
+      "city": "BloemfonteinRod",
+      "province": "Free State",
+      "count": 7,
+      "avgActivations": 4.428571428571429,
+      "lat": -29.187368428571425,
+      "lng": 6.276238011057897
+    },
+    {
+      "city": "BloemfonteinPha",
+      "province": "Free State",
+      "count": 7,
+      "avgActivations": 4.857142857142857,
+      "lat": -29.16469489142857,
+      "lng": 6.23933085463562
+    },
+    {
+      "city": "Electronic store",
+      "province": "North West",
+      "count": 7,
+      "avgActivations": 1.8571428571428572,
+      "lat": -26.266687777142856,
+      "lng": 6.9252746793872975
+    },
+    {
+      "city": "Tshing",
+      "province": "North West",
+      "count": 7,
+      "avgActivations": 5.285714285714286,
+      "lat": -26.317973905714286,
+      "lng": 6.809227161080129
+    },
+    {
+      "city": "Georgetown",
+      "province": "Gauteng",
+      "count": 7,
+      "avgActivations": 4.428571428571429,
+      "lat": -26.210599745714287,
+      "lng": 8.165798735535192
+    },
+    {
+      "city": "SowetoDevland",
+      "province": "Gauteng",
+      "count": 7,
+      "avgActivations": 3.5714285714285716,
+      "lat": -26.287972077142857,
+      "lng": 7.932319820320357
+    },
+    {
+      "city": "Endumeni",
+      "province": "KwaZulu-Natal",
+      "count": 7,
+      "avgActivations": 3.2857142857142856,
+      "lat": -28.179289254285717,
+      "lng": 0.23463889141684785
+    },
+    {
+      "city": "KimberleyAlbert",
+      "province": "Northern Cape",
+      "count": 6,
+      "avgActivations": 4.5,
+      "lat": -28.740427583333332,
+      "lng": 4.76271311643221
+    },
+    {
+      "city": "Bishop LavisWes",
+      "province": "Western Cape",
+      "count": 6,
+      "avgActivations": 5.833333333333333,
+      "lat": -33.95134540833333,
+      "lng": 8.588420295355874
+    },
+    {
+      "city": "SeawindsWestern",
+      "province": "Western Cape",
+      "count": 6,
+      "avgActivations": 4.5,
+      "lat": -34.07770494166667,
+      "lng": 8.487449124322788
+    },
+    {
+      "city": "Thembisile Hani",
+      "province": "Mpumalanga",
+      "count": 6,
+      "avgActivations": 2.8333333333333335,
+      "lat": -25.418927150000002,
+      "lng": 8.733373610242559
+    },
+    {
+      "city": "Mogalakwena",
+      "province": "Limpopo",
+      "count": 6,
+      "avgActivations": 3.6666666666666665,
+      "lat": -24.022328463333338,
+      "lng": 8.89738133714302
+    },
+    {
+      "city": "F",
+      "province": "Limpopo",
+      "count": 6,
+      "avgActivations": 4,
+      "lat": -24.271960116666666,
+      "lng": 9.859526651901861
+    },
+    {
+      "city": "E",
+      "province": "Limpopo",
+      "count": 6,
+      "avgActivations": 5.833333333333333,
+      "lat": -25.16292127,
+      "lng": 9.395265319892273
+    },
+    {
+      "city": "Setsoto",
+      "province": "Free State",
+      "count": 6,
+      "avgActivations": 5.5,
+      "lat": -28.905930263333335,
+      "lng": 7.55829672800174
+    },
+    {
+      "city": "BloemfonteinChr",
+      "province": "Free State",
+      "count": 6,
+      "avgActivations": 1.8333333333333333,
+      "lat": -29.17475702,
+      "lng": 6.2622899616824625
+    },
+    {
+      "city": "BloemfonteinKag",
+      "province": "Free State",
+      "count": 6,
+      "avgActivations": 6,
+      "lat": -29.18307466,
+      "lng": 6.2264843976524915
+    },
+    {
+      "city": "KlerksdorpPiena",
+      "province": "North West",
+      "count": 6,
+      "avgActivations": 5,
+      "lat": -26.863124213333332,
+      "lng": 6.664039638087097
+    },
+    {
+      "city": "Moretele",
+      "province": "Gauteng",
+      "count": 6,
+      "avgActivations": 6.5,
+      "lat": -25.357690246666664,
+      "lng": 8.273659808615337
+    },
+    {
+      "city": "Midvaal",
+      "province": "Gauteng",
+      "count": 6,
+      "avgActivations": 2.6666666666666665,
+      "lat": -26.556656333333336,
+      "lng": 8.006057265858582
+    },
+    {
+      "city": "JohannesburgHillbrow",
+      "province": "Gauteng",
+      "count": 6,
+      "avgActivations": 5.166666666666667,
+      "lat": -26.189484219999997,
+      "lng": 8.049657331514476
+    },
+    {
+      "city": "Thatchfield",
+      "province": "Gauteng",
+      "count": 6,
+      "avgActivations": 3.1666666666666665,
+      "lat": -25.89892633,
+      "lng": 8.103836093448567
+    },
+    {
+      "city": "Large car wash",
+      "province": "KwaZulu-Natal",
+      "count": 6,
+      "avgActivations": 4.333333333333333,
+      "lat": -27.822018725000003,
+      "lng": 0.7574256729842349
+    },
+    {
+      "city": "K",
+      "province": "Eastern Cape",
+      "count": 6,
+      "avgActivations": 3.1666666666666665,
+      "lat": -31.588558146666667,
+      "lng": 8.771091295037767
+    },
+    {
+      "city": "Nyandeni",
+      "province": "Eastern Cape",
+      "count": 6,
+      "avgActivations": 2.1666666666666665,
+      "lat": -31.540273793333338,
+      "lng": 9.01907637269225
+    },
+    {
+      "city": "King Sabata Dalindyebo",
+      "province": "Eastern Cape",
+      "count": 6,
+      "avgActivations": 6.166666666666667,
+      "lat": -31.5711007,
+      "lng": 8.7481246188267
+    },
+    {
+      "city": "UpingtonMorning",
+      "province": "Northern Cape",
+      "count": 5,
+      "avgActivations": 4.6,
+      "lat": -28.45622266,
+      "lng": 1.21799490796733
+    },
+    {
+      "city": "SpazaPhokwane",
+      "province": "Northern Cape",
+      "count": 5,
+      "avgActivations": 4.8,
+      "lat": -27.7787306,
+      "lng": 4.690764363781005
+    },
+    {
+      "city": "J",
+      "province": "Northern Cape",
+      "count": 5,
+      "avgActivations": 2.6,
+      "lat": -27.460198600000002,
+      "lng": 3.473541751819732
+    },
+    {
+      "city": "The HagueWester",
+      "province": "Western Cape",
+      "count": 5,
+      "avgActivations": 3.8,
+      "lat": -33.95968545,
+      "lng": 8.6406145241668
+    },
+    {
+      "city": "Sabata Dalindye",
+      "province": "Western Cape",
+      "count": 5,
+      "avgActivations": 5.2,
+      "lat": -34.024496864,
+      "lng": 8.67105667157742
+    },
+    {
+      "city": "Makhuduthamaga",
+      "province": "Limpopo",
+      "count": 5,
+      "avgActivations": 3.6,
+      "lat": -24.771362576,
+      "lng": 9.853722748210156
+    },
+    {
+      "city": "KlerksdorpFreem",
+      "province": "North West",
+      "count": 5,
+      "avgActivations": 4.8,
+      "lat": -26.874533559999996,
+      "lng": 6.604295459339665
+    },
+    {
+      "city": "KlerksdorpManzilpark",
+      "province": "North West",
+      "count": 5,
+      "avgActivations": 7.2,
+      "lat": -26.870529555999997,
+      "lng": 6.57188489628483
+    },
+    {
+      "city": "Moses Kotane",
+      "province": "North West",
+      "count": 5,
+      "avgActivations": 3,
+      "lat": -25.180333012000002,
+      "lng": 7.219300024357855
+    },
+    {
+      "city": "PretoriaPretori",
+      "province": "Gauteng",
+      "count": 5,
+      "avgActivations": 2.2,
+      "lat": -25.749903328,
+      "lng": 8.152704433518368
+    },
+    {
+      "city": "N/A",
+      "province": "Gauteng",
+      "count": 5,
+      "avgActivations": 5.2,
+      "lat": -25.636634371999996,
+      "lng": 8.188612027032578
+    },
+    {
+      "city": "SowetoPimville",
+      "province": "Gauteng",
+      "count": 5,
+      "avgActivations": 3.2,
+      "lat": -26.267295232000002,
+      "lng": 7.895413838904366
+    },
+    {
+      "city": "SpazauMfolozi",
+      "province": "KwaZulu-Natal",
+      "count": 5,
+      "avgActivations": 3.4,
+      "lat": -28.721558904,
+      "lng": 2.1609887626780364
+    },
+    {
+      "city": "DurbanPuntans Hill",
+      "province": "KwaZulu-Natal",
+      "count": 5,
+      "avgActivations": 3.6,
+      "lat": -29.816062369999997,
+      "lng": 1.000829273610364
+    },
+    {
+      "city": "Berkshire Downs",
+      "province": "KwaZulu-Natal",
+      "count": 5,
+      "avgActivations": 1.4,
+      "lat": -29.792303557999997,
+      "lng": 0.8914541207620401
+    },
+    {
+      "city": "DurbanUmkumbaan",
+      "province": "KwaZulu-Natal",
+      "count": 5,
+      "avgActivations": 4.8,
+      "lat": -29.85769251,
+      "lng": 0.9667865207079279
+    },
+    {
+      "city": "Clothing retailer",
+      "province": "Eastern Cape",
+      "count": 5,
+      "avgActivations": 6.6,
+      "lat": -30.991752036,
+      "lng": 9.6428852942474
+    },
+    {
+      "city": "SilversandsWest",
+      "province": "Western Cape",
+      "count": 4,
+      "avgActivations": 6.5,
+      "lat": -33.983663535000005,
+      "lng": 8.67628451654561
+    },
+    {
+      "city": "Mxolisi Phetani",
+      "province": "Western Cape",
+      "count": 4,
+      "avgActivations": 6.75,
+      "lat": -34.010407035,
+      "lng": 8.64319648906655
+    },
+    {
+      "city": "HarareWestern C",
+      "province": "Western Cape",
+      "count": 4,
+      "avgActivations": 4.75,
+      "lat": -34.062920309999996,
+      "lng": 8.674444815325966
+    },
+    {
+      "city": "VrygrondWestern",
+      "province": "Western Cape",
+      "count": 4,
+      "avgActivations": 3.25,
+      "lat": -34.084142835,
+      "lng": 8.487885789203396
+    },
+    {
+      "city": "Emalahleni",
+      "province": "Mpumalanga",
+      "count": 4,
+      "avgActivations": 6,
+      "lat": -26.216130865000004,
+      "lng": 9.28989146431155
+    },
+    {
+      "city": "Greater Tzaneen",
+      "province": "Limpopo",
+      "count": 4,
+      "avgActivations": 3.5,
+      "lat": -23.894107355000003,
+      "lng": 0.25937676043110175
+    },
+    {
+      "city": "Large car wash",
+      "province": "Limpopo",
+      "count": 4,
+      "avgActivations": 5.5,
+      "lat": -24.315249952499997,
+      "lng": 2.666269732689832
+    },
+    {
+      "city": "Matjhabeng",
+      "province": "Free State",
+      "count": 4,
+      "avgActivations": 4.75,
+      "lat": -27.95498612,
+      "lng": 6.807860796276585
+    },
+    {
+      "city": "N",
+      "province": "North West",
+      "count": 4,
+      "avgActivations": 4.5,
+      "lat": -26.958941389999996,
+      "lng": 4.7353528853305695
+    },
+    {
+      "city": "Large car wash",
+      "province": "North West",
+      "count": 4,
+      "avgActivations": 4,
+      "lat": -26.411691645,
+      "lng": 6.698064039437473
+    },
+    {
+      "city": "Westonaria",
+      "province": "Gauteng",
+      "count": 4,
+      "avgActivations": 3.75,
+      "lat": -26.320621195,
+      "lng": 7.661293365381457
+    },
+    {
+      "city": "Electronic store",
+      "province": "Gauteng",
+      "count": 4,
+      "avgActivations": 2.75,
+      "lat": -26.182893789999998,
+      "lng": 8.037470993523478
+    },
+    {
+      "city": "Furniture",
+      "province": "Gauteng",
+      "count": 4,
+      "avgActivations": 2,
+      "lat": -26.065044995,
+      "lng": 7.97548093651623
+    },
+    {
+      "city": "PretoriaArcadia",
+      "province": "Gauteng",
+      "count": 4,
+      "avgActivations": 4.75,
+      "lat": -25.75162807,
+      "lng": 8.22264926467301
+    },
+    {
+      "city": "SowetoOrlando Ekhaya",
+      "province": "Gauteng",
+      "count": 4,
+      "avgActivations": 4.25,
+      "lat": -26.24784272,
+      "lng": 7.930436959673848
+    },
+    {
+      "city": "SowetoMofolo North",
+      "province": "Gauteng",
+      "count": 4,
+      "avgActivations": 6.25,
+      "lat": -26.220879195,
+      "lng": 7.869776973291245
+    },
+    {
+      "city": "Liquor ",
+      "province": "KwaZulu-Natal",
+      "count": 4,
+      "avgActivations": 1.75,
+      "lat": -28.2551411725,
+      "lng": 0.2840437496455386
+    },
+    {
+      "city": "Motor ",
+      "province": "KwaZulu-Natal",
+      "count": 4,
+      "avgActivations": 3.75,
+      "lat": -29.875342755,
+      "lng": 0.9528197088047274
+    },
+    {
+      "city": "DurbanClare Hills",
+      "province": "KwaZulu-Natal",
+      "count": 4,
+      "avgActivations": 5,
+      "lat": -29.817736805,
+      "lng": 0.9768214363096399
+    },
+    {
+      "city": "Malukazi",
+      "province": "KwaZulu-Natal",
+      "count": 4,
+      "avgActivations": 4,
+      "lat": -29.9934391725,
+      "lng": 0.887769130197365
+    },
+    {
+      "city": "Hardware",
+      "province": "Eastern Cape",
+      "count": 4,
+      "avgActivations": 4.75,
+      "lat": -31.581021070000002,
+      "lng": 8.7797449147017
+    },
+    {
+      "city": "Wholesale/",
+      "province": "Northern Cape",
+      "count": 3,
+      "avgActivations": 7.333333333333333,
+      "lat": -27.989185586666668,
+      "lng": 4.287256757456767
+    },
+    {
+      "city": "Stellenbosch",
+      "province": "Western Cape",
+      "count": 3,
+      "avgActivations": 3.3333333333333335,
+      "lat": -33.91269191,
+      "lng": 8.85340214806361
+    },
+    {
+      "city": "Bellville South",
+      "province": "Western Cape",
+      "count": 3,
+      "avgActivations": 5.333333333333333,
+      "lat": -33.91623827333333,
+      "lng": 8.640016544788581
+    },
+    {
+      "city": "NomzamoWestern",
+      "province": "Western Cape",
+      "count": 3,
+      "avgActivations": 4.666666666666667,
+      "lat": -34.11367841,
+      "lng": 8.85552971160813
+    },
+    {
+      "city": "Ilitha ParkWest",
+      "province": "Western Cape",
+      "count": 3,
+      "avgActivations": 5.666666666666667,
+      "lat": -34.05265851000001,
+      "lng": 8.65926511497547
+    },
+    {
+      "city": "Racing ParkWest",
+      "province": "Western Cape",
+      "count": 3,
+      "avgActivations": 2,
+      "lat": -33.81688671,
+      "lng": 8.538365411748178
+    },
+    {
+      "city": "Liquor ",
+      "province": "Mpumalanga",
+      "count": 3,
+      "avgActivations": 4,
+      "lat": -25.551912243333334,
+      "lng": 6.447503477357689
+    },
+    {
+      "city": "Govan MbekieMba",
+      "province": "Mpumalanga",
+      "count": 3,
+      "avgActivations": 5.666666666666667,
+      "lat": -26.54992534666667,
+      "lng": 9.07828088423441
+    },
+    {
+      "city": "SpazaMsukaligwa",
+      "province": "Mpumalanga",
+      "count": 3,
+      "avgActivations": 6,
+      "lat": -26.51909001333333,
+      "lng": 6.649059930070474
+    },
+    {
+      "city": "MsukaligwaNeder",
+      "province": "Mpumalanga",
+      "count": 3,
+      "avgActivations": 2.6666666666666665,
+      "lat": -26.549363593333336,
+      "lng": 3.334907945406519
+    },
+    {
+      "city": "U",
+      "province": "Mpumalanga",
+      "count": 3,
+      "avgActivations": 4,
+      "lat": -25.771526363333333,
+      "lng": 1.0195368356180547
+    },
+    {
+      "city": "WelkomThabong",
+      "province": "Free State",
+      "count": 3,
+      "avgActivations": 3.3333333333333335,
+      "lat": -27.967746353333336,
+      "lng": 6.784049771257763
+    },
+    {
+      "city": "Large car wash",
+      "province": "Free State",
+      "count": 3,
+      "avgActivations": 5.666666666666667,
+      "lat": -28.86859115333333,
+      "lng": 7.832004116101083
+    },
+    {
+      "city": "BloemfonteinAshbury",
+      "province": "Free State",
+      "count": 3,
+      "avgActivations": 5,
+      "lat": -29.14775138,
+      "lng": 6.257968849528633
+    },
+    {
+      "city": "BloemfonteinWhi",
+      "province": "Free State",
+      "count": 3,
+      "avgActivations": 4,
+      "lat": -29.131315920000002,
+      "lng": 6.23164728960606
+    },
+    {
+      "city": "KlerksdorpAlabama",
+      "province": "North West",
+      "count": 3,
+      "avgActivations": 7.333333333333333,
+      "lat": -26.871480820000002,
+      "lng": 6.5915257809368155
+    },
+    {
+      "city": "Motor ",
+      "province": "North West",
+      "count": 3,
+      "avgActivations": 3.3333333333333335,
+      "lat": -26.818024786666665,
+      "lng": 6.810385968236132
+    },
+    {
+      "city": "PotchefstroomPromosa",
+      "province": "North West",
+      "count": 3,
+      "avgActivations": 4.666666666666667,
+      "lat": -26.714862446666668,
+      "lng": 7.024817286018094
+    },
+    {
+      "city": "RustenburgGa-Kgale",
+      "province": "North West",
+      "count": 3,
+      "avgActivations": 2.6666666666666665,
+      "lat": -25.60477074666667,
+      "lng": 7.175531195592477
+    },
+    {
+      "city": "SowetoProtea South",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 8,
+      "lat": -26.287243113333336,
+      "lng": 7.845865981472188
+    },
+    {
+      "city": "SowetoEldoradopark",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 5,
+      "lat": -26.292491120000005,
+      "lng": 7.894413956522577
+    },
+    {
+      "city": "Hardware",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 7,
+      "lat": -26.264369353333336,
+      "lng": 7.988450479916511
+    },
+    {
+      "city": "Marokolong",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 3,
+      "lat": -25.375914313333336,
+      "lng": 8.28743781222961
+    },
+    {
+      "city": "Thorntree View",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 7,
+      "lat": -25.560883413333332,
+      "lng": 8.066923507685798
+    },
+    {
+      "city": "SowetoNoordgesig",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 3,
+      "lat": -26.227691486666668,
+      "lng": 7.9316116129504834
+    },
+    {
+      "city": "SowetoJabulani",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 5,
+      "lat": -26.23682612,
+      "lng": 7.8594629104778875
+    },
+    {
+      "city": "SowetoDobsonvil",
+      "province": "Gauteng",
+      "count": 3,
+      "avgActivations": 6,
+      "lat": -26.232019786666665,
+      "lng": 7.809451949631146
+    },
+    {
+      "city": "LadysmithEgerton",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 4,
+      "lat": -28.559240619999997,
+      "lng": 9.781474306111667
+    },
+    {
+      "city": "NewcastleParadise",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 5.666666666666667,
+      "lat": -27.757448853333333,
+      "lng": 9.923457398350344
+    },
+    {
+      "city": "Dannhauser",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 0.6666666666666666,
+      "lat": -27.93405332,
+      "lng": 0.13790250514618
+    },
+    {
+      "city": "Mtubatuba",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 3.6666666666666665,
+      "lat": -28.432781386666665,
+      "lng": 2.1430248189233234
+    },
+    {
+      "city": "KwaDukuza",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 5,
+      "lat": -29.342142163333335,
+      "lng": 1.2931235500415987
+    },
+    {
+      "city": "Lindley",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 5.333333333333333,
+      "lat": -29.70502998666667,
+      "lng": 0.9315154101948767
+    },
+    {
+      "city": "Mariannhill",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 3.6666666666666665,
+      "lat": -29.83911683,
+      "lng": 0.8065839848383467
+    },
+    {
+      "city": "DurbanSouth Beach",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 3,
+      "lat": -29.85755743,
+      "lng": 1.03481724382029
+    },
+    {
+      "city": "Chesterville",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 0.6666666666666666,
+      "lat": -29.850100486666665,
+      "lng": 0.9428832471760901
+    },
+    {
+      "city": "DurbanClairwood",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 2.6666666666666665,
+      "lat": -29.91517403,
+      "lng": 0.9819269087810133
+    },
+    {
+      "city": "H",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 4.333333333333333,
+      "lat": -30.803405729999998,
+      "lng": 0.340971107448275
+    },
+    {
+      "city": "U",
+      "province": "KwaZulu-Natal",
+      "count": 3,
+      "avgActivations": 7,
+      "lat": -30.262185619999997,
+      "lng": 9.93991651100202
+    },
+    {
+      "city": "Siyancuma",
+      "province": "Northern Cape",
+      "count": 2,
+      "avgActivations": 1,
+      "lat": -29.07415422,
+      "lng": 3.77426002114375
+    },
+    {
+      "city": "CleaningSol ",
+      "province": "Northern Cape",
+      "count": 2,
+      "avgActivations": 5.5,
+      "lat": -28.73080092,
+      "lng": 4.75109743130092
+    },
+    {
+      "city": "KimberleyGaleshewe",
+      "province": "Northern Cape",
+      "count": 2,
+      "avgActivations": 8.5,
+      "lat": -28.72555691,
+      "lng": 4.743261531305745
+    },
+    {
+      "city": "KimberleyGemdene",
+      "province": "Northern Cape",
+      "count": 2,
+      "avgActivations": 8.5,
+      "lat": -28.72924387,
+      "lng": 4.752925821308435
+    },
+    {
+      "city": "SpazaKimberleyR",
+      "province": "Northern Cape",
+      "count": 2,
+      "avgActivations": 0.5,
+      "lat": -28.729335069999998,
+      "lng": 4.71190938632573
+    },
+    {
+      "city": "Gamagara",
+      "province": "Northern Cape",
+      "count": 2,
+      "avgActivations": 8,
+      "lat": -27.70070577,
+      "lng": 3.0120880369772367
+    },
+    {
+      "city": "Clothing retailer",
+      "province": "Northern Cape",
+      "count": 2,
+      "avgActivations": 3.5,
+      "lat": -28.45780092,
+      "lng": 1.245706537445861
+    },
+    {
+      "city": "WallacedeneWest",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -33.852041255,
+      "lng": 8.737262711433416
+    },
+    {
+      "city": "ParowWestern Ca",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 2,
+      "lat": -33.907535304999996,
+      "lng": 8.584633261463555
+    },
+    {
+      "city": "VrijzeeWestern",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 5.5,
+      "lat": -33.91797416,
+      "lng": 8.57342396146664
+    },
+    {
+      "city": "Epping ForestWe",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 4,
+      "lat": -33.934978455,
+      "lng": 8.579546466470074
+    },
+    {
+      "city": "EurekaWestern C",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 4,
+      "lat": -33.935329859999996,
+      "lng": 8.589810311472766
+    },
+    {
+      "city": "CamelotWestern",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -33.96875156,
+      "lng": 8.65720936152497
+    },
+    {
+      "city": "Nomzamo",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 9,
+      "lat": -34.11478176,
+      "lng": 8.855973411608321
+    },
+    {
+      "city": "Pelikan ParkWes",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 7,
+      "lat": -34.046582709999996,
+      "lng": 8.525480611662505
+    },
+    {
+      "city": "Lotus River",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 5.5,
+      "lat": -34.03779051,
+      "lng": 8.512297161664785
+    },
+    {
+      "city": "Vrygrond",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 7.5,
+      "lat": -34.08504791,
+      "lng": 8.485580161673385
+    },
+    {
+      "city": "Lavender HillWe",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 1.5,
+      "lat": -34.073233404999996,
+      "lng": 8.493146439653671
+    },
+    {
+      "city": "RuyterwachtWest",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 9,
+      "lat": -33.91620666,
+      "lng": 8.551485311714345
+    },
+    {
+      "city": "Vrijzee",
+      "province": "Western Cape",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -33.91456386,
+      "lng": 8.566297941689886
+    },
+    {
+      "city": "Butchery",
+      "province": "Mpumalanga",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -26.218223469999998,
+      "lng": 9.860024381143031
+    },
+    {
+      "city": "Large car wash",
+      "province": "Mpumalanga",
+      "count": 2,
+      "avgActivations": 2.5,
+      "lat": -26.518678219999998,
+      "lng": 9.53083189032657
+    },
+    {
+      "city": "Govan MbekiMilanpark",
+      "province": "Mpumalanga",
+      "count": 2,
+      "avgActivations": 8,
+      "lat": -26.47453887,
+      "lng": 9.464316976976214
+    },
+    {
+      "city": "Mbombela (Nelsp",
+      "province": "Mpumalanga",
+      "count": 2,
+      "avgActivations": 3,
+      "lat": -25.46707768,
+      "lng": 0.9516716472846429
+    },
+    {
+      "city": "eMalahleniHlala",
+      "province": "Mpumalanga",
+      "count": 2,
+      "avgActivations": 0.5,
+      "lat": -25.84993462,
+      "lng": 9.121317068236486
+    },
+    {
+      "city": "Superette",
+      "province": "Limpopo",
+      "count": 2,
+      "avgActivations": 1.5,
+      "lat": -23.8356432,
+      "lng": 9.191045856278086
+    },
+    {
+      "city": "Butchery",
+      "province": "Limpopo",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -24.35585026,
+      "lng": 9.661960700789166
+    },
+    {
+      "city": "PolokwaneIvy Park",
+      "province": "Limpopo",
+      "count": 2,
+      "avgActivations": 4,
+      "lat": -23.91488757,
+      "lng": 9.441345866925625
+    },
+    {
+      "city": "Wholesale/",
+      "province": "Limpopo",
+      "count": 2,
+      "avgActivations": 0,
+      "lat": -23.9049521,
+      "lng": 9.5914075726256
+    },
+    {
+      "city": "Molemole",
+      "province": "Limpopo",
+      "count": 2,
+      "avgActivations": 3.5,
+      "lat": -23.39238182,
+      "lng": 9.428925212148144
+    },
+    {
+      "city": "Electronic store",
+      "province": "Limpopo",
+      "count": 2,
+      "avgActivations": 1.5,
+      "lat": -24.777886475,
+      "lng": 4.31079318662772
+    },
+    {
+      "city": "T",
+      "province": "Limpopo",
+      "count": 2,
+      "avgActivations": 1.5,
+      "lat": -24.58319692,
+      "lng": 7.389269873560531
+    },
+    {
+      "city": "WelkomOppenheim",
+      "province": "Free State",
+      "count": 2,
+      "avgActivations": 7,
+      "lat": -27.96544172,
+      "lng": 6.807279546264761
+    },
+    {
+      "city": "WelkomOrange Grove",
+      "province": "Free State",
+      "count": 2,
+      "avgActivations": 5.5,
+      "lat": -27.96434757,
+      "lng": 6.83491972699759
+    },
+    {
+      "city": "Mangaung",
+      "province": "Free State",
+      "count": 2,
+      "avgActivations": 2.5,
+      "lat": -29.160845260000002,
+      "lng": 6.2829906173130645
+    },
+    {
+      "city": "Greater Taung",
+      "province": "North West",
+      "count": 2,
+      "avgActivations": 1.5,
+      "lat": -27.56169062,
+      "lng": 4.748146248059831
+    },
+    {
+      "city": "KlerksdorpSakhrol",
+      "province": "North West",
+      "count": 2,
+      "avgActivations": 5.5,
+      "lat": -26.86647877,
+      "lng": 6.585986304238718
+    },
+    {
+      "city": "Pharmacy",
+      "province": "North West",
+      "count": 2,
+      "avgActivations": 8,
+      "lat": -26.86656542,
+      "lng": 6.66427583641953
+    },
+    {
+      "city": "Wholesale/",
+      "province": "North West",
+      "count": 2,
+      "avgActivations": 7,
+      "lat": -26.25622906,
+      "lng": 6.9504187382008
+    },
+    {
+      "city": "Clothing retailer",
+      "province": "North West",
+      "count": 2,
+      "avgActivations": 3.5,
+      "lat": -25.99162032,
+      "lng": 7.03383556733875
+    },
+    {
+      "city": "RustenburgKana",
+      "province": "North West",
+      "count": 2,
+      "avgActivations": 6.5,
+      "lat": -25.58471677,
+      "lng": 7.2959005222029845
+    },
+    {
+      "city": "Pharmacy",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 2,
+      "lat": -26.354502410000002,
+      "lng": 7.893189620149444
+    },
+    {
+      "city": "SowetoKlipriviersoog",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -26.29041037,
+      "lng": 7.846528163638819
+    },
+    {
+      "city": "SowetoNancefield",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 8,
+      "lat": -26.30990122,
+      "lng": 7.903024965640196
+    },
+    {
+      "city": "Twala",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -26.33972307,
+      "lng": 8.142960366172845
+    },
+    {
+      "city": "Lesedi",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 1,
+      "lat": -26.51151387,
+      "lng": 8.35477816167894
+    },
+    {
+      "city": "L",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 6.5,
+      "lat": -26.536494769999997,
+      "lng": 8.35899060098701
+    },
+    {
+      "city": "Electronic store ",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -26.211121419999998,
+      "lng": 8.167014960689873
+    },
+    {
+      "city": "JohannesburgBerea",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -26.1872826,
+      "lng": 8.052846211691827
+    },
+    {
+      "city": "Rabie Ridge",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 1.5,
+      "lat": -26.00799877,
+      "lng": 8.177636852094874
+    },
+    {
+      "city": "Bakery ",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -25.36295777,
+      "lng": 8.269637912732588
+    },
+    {
+      "city": "Leboneng",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 3,
+      "lat": -25.36735467,
+      "lng": 8.267412566731606
+    },
+    {
+      "city": "Matenteng",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -25.392558809999997,
+      "lng": 8.175438520457401
+    },
+    {
+      "city": "Nuwe Eersterus",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -25.418362469999998,
+      "lng": 8.130248661738502
+    },
+    {
+      "city": "SpazaKlippan",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 3,
+      "lat": -25.477240119999998,
+      "lng": 8.07006780837122
+    },
+    {
+      "city": "Dibutsu",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 7.5,
+      "lat": -25.57246456,
+      "lng": 8.01385076375545
+    },
+    {
+      "city": "PretoriaClaremont",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 3,
+      "lat": -25.711744099999997,
+      "lng": 8.13453481444931
+    },
+    {
+      "city": "Cleaning",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 2.5,
+      "lat": -26.121421220000002,
+      "lng": 7.96157836177485
+    },
+    {
+      "city": "Wholesale/",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -26.234995509999997,
+      "lng": 7.938790660288255
+    },
+    {
+      "city": "JohannesburgKen",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 3,
+      "lat": -26.24615491,
+      "lng": 8.043278516535414
+    },
+    {
+      "city": "JohannesburgNoo",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -26.2349287,
+      "lng": 7.949016274283485
+    },
+    {
+      "city": "SowetoDube",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 5.5,
+      "lat": -26.23742782,
+      "lng": 7.900426629784825
+    },
+    {
+      "city": "SowetoMeadowlan",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 3,
+      "lat": -26.219152270000002,
+      "lng": 7.901143014785221
+    },
+    {
+      "city": "SowetoOrlando",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 1,
+      "lat": -26.22348042,
+      "lng": 7.9071412127851985
+    },
+    {
+      "city": "Motor ",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -26.21314342,
+      "lng": 7.869898914290841
+    },
+    {
+      "city": "SowetoDlamini",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -26.26994271,
+      "lng": 7.8834829250093765
+    },
+    {
+      "city": "JohannesburgNaturena",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 2,
+      "lat": -26.275973370000003,
+      "lng": 7.956260018288782
+    },
+    {
+      "city": "JohannesburgKathrada",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 8,
+      "lat": -26.18323451,
+      "lng": 7.963516467609686
+    },
+    {
+      "city": "JohannesburgSop",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 3.5,
+      "lat": -26.17389752,
+      "lng": 7.968556151610553
+    },
+    {
+      "city": "SowetoDoornkop",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -26.24074702,
+      "lng": 7.798770271798093
+    },
+    {
+      "city": "Mogale City",
+      "province": "Gauteng",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -26.18603372,
+      "lng": 7.76466272865253
+    },
+    {
+      "city": "NewcastleVlam",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -27.760880919999998,
+      "lng": 9.944705016689941
+    },
+    {
+      "city": "Wholesale/",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 3.5,
+      "lat": -28.74762363,
+      "lng": 0.50883393186211
+    },
+    {
+      "city": "Electronic store",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 6.5,
+      "lat": -28.79064143,
+      "lng": 0.43236409271334497
+    },
+    {
+      "city": "Hardware",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 3.5,
+      "lat": -27.78833448,
+      "lng": 0.141614271749625
+    },
+    {
+      "city": "eDumbe",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -27.403507915,
+      "lng": 0.8240357521220101
+    },
+    {
+      "city": "uMlalazi",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 7,
+      "lat": -28.890289879999997,
+      "lng": 1.4950098874583402
+    },
+    {
+      "city": "K",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 1.5,
+      "lat": -29.41550623,
+      "lng": 1.2509425883931795
+    },
+    {
+      "city": "Bhambayi",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -29.703098365000002,
+      "lng": 0.973825746303135
+    },
+    {
+      "city": "KwaMashu",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 8,
+      "lat": -29.75244643,
+      "lng": 0.974183733558345
+    },
+    {
+      "city": "Laundrye",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 7,
+      "lat": -29.80519198,
+      "lng": 0.886034504698515
+    },
+    {
+      "city": "DurbanEarlsfield",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 1,
+      "lat": -29.77267468,
+      "lng": 0.936799894690415
+    },
+    {
+      "city": "DurbanSea-Cow Lake",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 3,
+      "lat": -29.802529315,
+      "lng": 1.0017577436043
+    },
+    {
+      "city": "Motalabad",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -29.78114573,
+      "lng": 0.89261925863686
+    },
+    {
+      "city": "KwaDabeka",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 6,
+      "lat": -29.778969815,
+      "lng": 0.8973094536430251
+    },
+    {
+      "city": "Cleaninge",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 2,
+      "lat": -29.85669908,
+      "lng": 0.81229409369834
+    },
+    {
+      "city": "Superettee",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 1,
+      "lat": -29.899798179999998,
+      "lng": 0.892959138888078
+    },
+    {
+      "city": "DurbanBellair",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 4,
+      "lat": -29.888440165,
+      "lng": 0.954073498853825
+    },
+    {
+      "city": "G",
+      "province": "KwaZulu-Natal",
+      "count": 2,
+      "avgActivations": 7.5,
+      "lat": -30.54038272,
+      "lng": 9.429276154249969
+    },
+    {
+      "city": "Funeral ",
+      "province": "Eastern Cape",
+      "count": 2,
+      "avgActivations": 4,
+      "lat": -31.335569470000003,
+      "lng": 9.1456433166955
+    },
+    {
+      "city": "MthathaHillcrest",
+      "province": "Eastern Cape",
+      "count": 2,
+      "avgActivations": 4.5,
+      "lat": -31.58850662,
+      "lng": 8.79141651660545
+    },
+    {
+      "city": "Superette",
+      "province": "Eastern Cape",
+      "count": 2,
+      "avgActivations": 5.5,
+      "lat": -31.57638276,
+      "lng": 8.948750364318
+    },
+    {
+      "city": "Motor ",
+      "province": "Eastern Cape",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -31.479165469999998,
+      "lng": 9.4218381317025
+    },
+    {
+      "city": "Port St Johns",
+      "province": "Eastern Cape",
+      "count": 2,
+      "avgActivations": 5,
+      "lat": -31.63226842,
+      "lng": 9.5394859116998
+    },
+    {
+      "city": "Large car wash",
+      "province": "Eastern Cape",
+      "count": 2,
+      "avgActivations": 8.5,
+      "lat": -31.074183025,
+      "lng": 4.825836652137149
+    },
+    {
+      "city": "Upington",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -28.4278152,
+      "lng": 1.2067959253903
+    },
+    {
+      "city": "UpingtonHillside",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -28.45714262,
+      "lng": 1.1997249457056
+    },
+    {
+      "city": "ÇnKhara Hais",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -28.45198972,
+      "lng": 1.2056958757276
+    },
+    {
+      "city": "n",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -28.45179832,
+      "lng": 1.210973957408
+    },
+    {
+      "city": "SpazaUpingtonPr",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -28.45862382,
+      "lng": 1.2269343358685
+    },
+    {
+      "city": "Clothing retailerKai !",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -28.77705372,
+      "lng": 0.620620847243
+    },
+    {
+      "city": "Sol Plaatje",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -28.74791872,
+      "lng": 4.78825649128728
+    },
+    {
+      "city": "SparesSol ",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -28.7409972,
+      "lng": 4.7641547129286
+    },
+    {
+      "city": "KimberleyWest End",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -28.73562592,
+      "lng": 4.74483593130046
+    },
+    {
+      "city": "3",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -28.71291842,
+      "lng": 4.69191175133728
+    },
+    {
+      "city": "ButcherySol ",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -28.7076282,
+      "lng": 4.71633268134838
+    },
+    {
+      "city": "KimberleyVergenoeg",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -28.70767392,
+      "lng": 4.714889815134863
+    },
+    {
+      "city": "a",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -28.71569952,
+      "lng": 4.73888683135862
+    },
+    {
+      "city": "aSpazaSol Plaatje",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -28.70417992,
+      "lng": 4.7271895136437
+    },
+    {
+      "city": "s",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -28.65700042,
+      "lng": 4.71974385137751
+    },
+    {
+      "city": "Dikgatlong",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -28.32755282,
+      "lng": 4.691996831673333
+    },
+    {
+      "city": "FurnitureGa-",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -27.46284682,
+      "lng": 3.43301552206934
+    },
+    {
+      "city": "PharmacyGa-",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -27.46268222,
+      "lng": 3.43377573206941
+    },
+    {
+      "city": "ButcheryGa-",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -27.45775482,
+      "lng": 3.43417013207295
+    },
+    {
+      "city": "Electronic store",
+      "province": "Northern Cape",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -28.45937682,
+      "lng": 1.24389793244608
+    },
+    {
+      "city": "D",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -33.66476671,
+      "lng": 8.9940501113531
+    },
+    {
+      "city": "Drakenstein",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -33.66810111,
+      "lng": 8.99484971135372
+    },
+    {
+      "city": "ScottsdeneWeste",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -33.86346641,
+      "lng": 8.72527161142176
+    },
+    {
+      "city": "OakdaleWestern",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -33.90111141,
+      "lng": 8.62875981145107
+    },
+    {
+      "city": "MatroosfonteinW",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -33.94214191,
+      "lng": 8.57330431147045
+    },
+    {
+      "city": "NyangaWestern C",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -33.98637621,
+      "lng": 8.57570991148865
+    },
+    {
+      "city": "Sweet HomeWeste",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -34.00750351,
+      "lng": 8.56273461149333
+    },
+    {
+      "city": "Matroosfontein, ",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -33.95690311,
+      "lng": 8.63145851151266
+    },
+    {
+      "city": "VoorbrugWestern",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -33.96980891,
+      "lng": 8.65307761151583
+    },
+    {
+      "city": "DelftWestern Ca",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -33.96500011,
+      "lng": 8.65119641151687
+    },
+    {
+      "city": "Silversands",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -33.9847051,
+      "lng": 8.676711155097
+    },
+    {
+      "city": "Nonqubela (Site B)",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -34.01729461,
+      "lng": 8.66523512157808
+    },
+    {
+      "city": "Silvertown - Kh",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -34.04091571,
+      "lng": 8.68326091158154
+    },
+    {
+      "city": "Weltevreden",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -34.11636871,
+      "lng": 8.86077471160924
+    },
+    {
+      "city": "Lavender Hill",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -34.07059691,
+      "lng": 8.49133091167678
+    },
+    {
+      "city": "SteenbergWester",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -34.06465661,
+      "lng": 8.47194641167907
+    },
+    {
+      "city": "WestlakeWestern",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -34.07514441,
+      "lng": 8.43861482168461
+    },
+    {
+      "city": "Cape TownBeltho",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -33.9789141,
+      "lng": 8.51530311170256
+    },
+    {
+      "city": "GoodwoodWestern",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -33.9121641,
+      "lng": 8.55885641171542
+    },
+    {
+      "city": "Goodwood Ext. 1",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -33.91043721,
+      "lng": 8.5474628117195
+    },
+    {
+      "city": "Cape TownKensin",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -33.91032351,
+      "lng": 8.50368452172474
+    },
+    {
+      "city": "Cape TownMaitla",
+      "province": "Western Cape",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -33.92106651,
+      "lng": 8.49512551172687
+    },
+    {
+      "city": "Cafe",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.13470032,
+      "lng": 9.7294207617093
+    },
+    {
+      "city": "Govan MbekiBeth",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -26.43672912,
+      "lng": 9.491335761765704
+    },
+    {
+      "city": "Govan MbekieMzinoni",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.46503782,
+      "lng": 9.45728716197299
+    },
+    {
+      "city": "Gift ",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.49285852,
+      "lng": 9.96684917203736
+    },
+    {
+      "city": "MsukaligwaDe Br",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.52832952,
+      "lng": 9.96928788206638
+    },
+    {
+      "city": "NkomaziBuffelspruit",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -25.6693973,
+      "lng": 1.510162752458284
+    },
+    {
+      "city": "MbombelaNyamazaneni",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -25.45235863,
+      "lng": 1.168712215253672
+    },
+    {
+      "city": "MbombelaTekwane",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -25.47522513,
+      "lng": 1.14538596254133
+    },
+    {
+      "city": "MbombelaPhola",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -25.16957733,
+      "lng": 1.141533962624921
+    },
+    {
+      "city": "MbombelaNsikazi",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -25.22243963,
+      "lng": 1.09696798263416
+    },
+    {
+      "city": "MbombelaBojwana",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -25.13293633,
+      "lng": 1.13761977264823
+    },
+    {
+      "city": "MbombelaNkambeni",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -25.10114343,
+      "lng": 1.13589955265228
+    },
+    {
+      "city": "B",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -24.60007153,
+      "lng": 1.04587256275813
+    },
+    {
+      "city": "Ward 37",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -24.82037333,
+      "lng": 1.0880947280685
+    },
+    {
+      "city": "Large car washe",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -25.87040952,
+      "lng": 9.17505657319474
+    },
+    {
+      "city": "eMalahleniSchoo",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -25.87343282,
+      "lng": 9.172371610319585
+    },
+    {
+      "city": "eMalahleniClewer",
+      "province": "Mpumalanga",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -25.8961162,
+      "lng": 9.13597485324791
+    },
+    {
+      "city": "Lodge",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -25.24914152,
+      "lng": 8.29852157141497
+    },
+    {
+      "city": "A",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -23.63714832,
+      "lng": 9.014300391741209
+    },
+    {
+      "city": "SpazaPolokwane",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -23.8105352,
+      "lng": 9.2549425177762
+    },
+    {
+      "city": "PolokwanePerskebult",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -23.81136732,
+      "lng": 9.36425336182772
+    },
+    {
+      "city": "Cleaning",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -23.83906212,
+      "lng": 9.35043019184764
+    },
+    {
+      "city": "Cafe",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -23.904462,
+      "lng": 9.4730115192949
+    },
+    {
+      "city": "Clothing retailer",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -23.9103962,
+      "lng": 9.4520127193289
+    },
+    {
+      "city": "Makhado",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -23.08402162,
+      "lng": 9.67146436211561
+    },
+    {
+      "city": "WelkomVoorspoed",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -27.98190082,
+      "lng": 6.780397531254043
+    },
+    {
+      "city": "WelkomNew Jerusalem",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -27.9542052,
+      "lng": 6.81243455127906
+    },
+    {
+      "city": "Glass shop",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.89672042,
+      "lng": 8.07183284154881
+    },
+    {
+      "city": "Metsimaholo",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.89769432,
+      "lng": 8.06855426154916
+    },
+    {
+      "city": "Butchery",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -28.24757522,
+      "lng": 9.10603745220746
+    },
+    {
+      "city": "Motor ",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -28.48846522,
+      "lng": 8.84262843226351
+    },
+    {
+      "city": "Cafe",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -28.56418312,
+      "lng": 8.82189536230743
+    },
+    {
+      "city": "Electronic store",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.231942,
+      "lng": 6.7085915271722
+    },
+    {
+      "city": "Tattoo",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.2399562,
+      "lng": 6.7101887274579
+    },
+    {
+      "city": "BloemfonteinJ B",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.19778422,
+      "lng": 6.2350026288682
+    },
+    {
+      "city": "BloemfonteinOos",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.12727212,
+      "lng": 6.24504238293232
+    },
+    {
+      "city": "Tavern / barBlo",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.13472882,
+      "lng": 6.23409885293857
+    },
+    {
+      "city": "Furniture",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -29.11721052,
+      "lng": 6.22341683294674
+    },
+    {
+      "city": "BloemfonteinWestdene",
+      "province": "Free State",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -29.11207642,
+      "lng": 6.21461215295025
+    },
+    {
+      "city": "Butchery",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.87264492,
+      "lng": 6.586281211134335
+    },
+    {
+      "city": "Transport",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.8764462,
+      "lng": 6.565968134734
+    },
+    {
+      "city": "Medical ",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.884372,
+      "lng": 6.5886086135455
+    },
+    {
+      "city": "SpazaKlerksdorp",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.86834492,
+      "lng": 6.665088810141239
+    },
+    {
+      "city": "Muthi shop",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.86870522,
+      "lng": 6.66410238141521
+    },
+    {
+      "city": "KlerksdorpFlamwood",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.8432942,
+      "lng": 6.6577425142011
+    },
+    {
+      "city": "Motors en bakkies",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.86517662,
+      "lng": 6.640305112142332
+    },
+    {
+      "city": "Wholesale/Retai",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.86352172,
+      "lng": 6.66188267142614
+    },
+    {
+      "city": "KlerksdorpIrenepark",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.8561842,
+      "lng": 6.672468513142954
+    },
+    {
+      "city": "Family outfitters",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.71116732,
+      "lng": 7.1000478153872
+    },
+    {
+      "city": "Centre",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.71434672,
+      "lng": 7.09798765154126
+    },
+    {
+      "city": "RustenburgRolihlahla",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -25.61537122,
+      "lng": 7.26099917215191
+    },
+    {
+      "city": "RustenburgChachalaza",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -25.60172622,
+      "lng": 7.28010215217136
+    },
+    {
+      "city": "RustenburgRankunyana",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -25.57157712,
+      "lng": 7.2993904621987
+    },
+    {
+      "city": "RustenburgMatalaneng",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -25.57743262,
+      "lng": 7.3041665220113
+    },
+    {
+      "city": "RustenburgRadintsha",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -25.58559882,
+      "lng": 7.30930885220328
+    },
+    {
+      "city": "Tailor",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -25.64654922,
+      "lng": 7.2332554922324
+    },
+    {
+      "city": "SpazaRustenburg",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -25.59420372,
+      "lng": 7.13879185226809
+    },
+    {
+      "city": "n",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -25.28654852,
+      "lng": 7.2034875523233
+    },
+    {
+      "city": "Superette",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -25.56410072,
+      "lng": 7.1546724236
+    },
+    {
+      "city": "Kgetleng River",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -25.84395612,
+      "lng": 6.887978252483227
+    },
+    {
+      "city": "Cleaning",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.31611422,
+      "lng": 6.82495285254585
+    },
+    {
+      "city": "ButcheryDr ",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.31742382,
+      "lng": 6.823434725471
+    },
+    {
+      "city": "CafeDr ",
+      "province": "North West",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.31789612,
+      "lng": 6.8225088625472
+    },
+    {
+      "city": "Tobacco ",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.2130412,
+      "lng": 7.696338214129429
+    },
+    {
+      "city": "Lodge",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.29010162,
+      "lng": 7.86575820139381
+    },
+    {
+      "city": "Lenasia SouthGa",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.386242,
+      "lng": 7.857500821146644
+    },
+    {
+      "city": "Wielers Farm se",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.40907442,
+      "lng": 7.902764612152118
+    },
+    {
+      "city": "Hartebeestfontein",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.41677282,
+      "lng": 7.88187312153422
+    },
+    {
+      "city": "Ncala",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.34873722,
+      "lng": 8.14660110172149
+    },
+    {
+      "city": "Radebe",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.34529182,
+      "lng": 8.144549411172205
+    },
+    {
+      "city": "Katlehong",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.33198892,
+      "lng": 8.15121671217249
+    },
+    {
+      "city": "Nhlapo",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -26.30982312,
+      "lng": 8.145731513173507
+    },
+    {
+      "city": "Tsongweni",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.30440772,
+      "lng": 8.15000471017364
+    },
+    {
+      "city": "Duduza",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.37511172,
+      "lng": 8.407226711183267
+    },
+    {
+      "city": "SpazaCity of Ekurhuleni",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.29965072,
+      "lng": 8.39341969185272
+    },
+    {
+      "city": "Spaza City of Ekurhuleni",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.29591932,
+      "lng": 8.388011914185359
+    },
+    {
+      "city": "Parkhill Gardens",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -26.22939612,
+      "lng": 8.1804684918918
+    },
+    {
+      "city": "Hardware ",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.21424522,
+      "lng": 8.168915710189815
+    },
+    {
+      "city": "Liquor ",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.2128352,
+      "lng": 8.167671413189913
+    },
+    {
+      "city": "Clothing retailer",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.21305852,
+      "lng": 8.167713511189913
+    },
+    {
+      "city": "Cafe",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.21221972,
+      "lng": 8.166864210189933
+    },
+    {
+      "city": "JohannesburgDenver",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.20205142,
+      "lng": 8.110130119190824
+    },
+    {
+      "city": "JohannesburgJud",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -26.18863532,
+      "lng": 8.07344691119133
+    },
+    {
+      "city": "JohannesburgYeoville",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.17849492,
+      "lng": 8.063048818192039
+    },
+    {
+      "city": "Bakery",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.10764212,
+      "lng": 8.097129110193107
+    },
+    {
+      "city": "SandtonAlexandra",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.10337932,
+      "lng": 8.097880612193299
+    },
+    {
+      "city": "SandtonMarlboro",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -26.09986052,
+      "lng": 8.089768110193464
+    },
+    {
+      "city": "VusimuziGauteng",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.03015242,
+      "lng": 8.206802812196562
+    },
+    {
+      "city": "Makhulong",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -26.00401972,
+      "lng": 8.230999817319733
+    },
+    {
+      "city": "Heuweloord",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -25.87729582,
+      "lng": 8.108208616203527
+    },
+    {
+      "city": "Phomolong",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -25.72168092,
+      "lng": 8.4248910218568
+    },
+    {
+      "city": "Spaza City of Tshwane",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -25.38702692,
+      "lng": 8.289373610229767
+    },
+    {
+      "city": "Temba",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -25.39415092,
+      "lng": 8.25796141023403
+    },
+    {
+      "city": "Funeral ",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -25.35938732,
+      "lng": 8.246393210234961
+    },
+    {
+      "city": "MajanengGauteng",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -25.36106132,
+      "lng": 8.240403310235044
+    },
+    {
+      "city": "Sekampaneng",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -25.39015962,
+      "lng": 8.172790310237284
+    },
+    {
+      "city": "Sun Valley",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -25.52079522,
+      "lng": 8.079044411244078
+    },
+    {
+      "city": "Lona",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -25.57774032,
+      "lng": 8.015116112255367
+    },
+    {
+      "city": "The Orchards",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -25.64517452,
+      "lng": 8.093435613261475
+    },
+    {
+      "city": "RandburgBordeaux",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.09451372,
+      "lng": 8.005361510275566
+    },
+    {
+      "city": "JohannesburgWes",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -26.18550142,
+      "lng": 7.98155639276954
+    },
+    {
+      "city": "JohannesburgCrosby",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.19527982,
+      "lng": 7.983290714277181
+    },
+    {
+      "city": "JohannesburgMayfair",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.20321892,
+      "lng": 8.017223910277986
+    },
+    {
+      "city": "JohannesburgNewtown",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.20154022,
+      "lng": 8.050438210278427
+    },
+    {
+      "city": "JohannesburgRos",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.24484382,
+      "lng": 8.05684499279002
+    },
+    {
+      "city": "JohannesburgTow",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.2450212,
+      "lng": 8.05605181127901
+    },
+    {
+      "city": "JohannesburgAsp",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.24461542,
+      "lng": 8.038147810279256
+    },
+    {
+      "city": "JohannesburgOrmonde",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.24142142,
+      "lng": 8.004993117279785
+    },
+    {
+      "city": "JohannesburgCro",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -26.24433582,
+      "lng": 8.00598292427983
+    },
+    {
+      "city": "JohannesburgAla",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -26.26806252,
+      "lng": 7.978237418282154
+    },
+    {
+      "city": "JohannesburgDie",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.24072722,
+      "lng": 7.954006335283339
+    },
+    {
+      "city": "SowetoOrlando East",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.23704992,
+      "lng": 7.936067210283993
+    },
+    {
+      "city": "SpazaSowetoOrla",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.24740192,
+      "lng": 7.93108761128432
+    },
+    {
+      "city": "SowetoDobsonville",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.22677532,
+      "lng": 7.862031320286044
+    },
+    {
+      "city": "SowetoSenaoane",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -26.27117032,
+      "lng": 7.855868617286715
+    },
+    {
+      "city": "SowetoMoroka",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -26.26364912,
+      "lng": 7.88040812287212
+    },
+    {
+      "city": "JohannesburgDevland",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -26.29126462,
+      "lng": 7.945586140291063
+    },
+    {
+      "city": "JohannesburgBosmont",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.18977782,
+      "lng": 7.957089111292473
+    },
+    {
+      "city": "JohannesburgNewlands",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -26.18165692,
+      "lng": 7.967550912292706
+    },
+    {
+      "city": "JohannesburgDelarey",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -26.17414042,
+      "lng": 7.948514911293049
+    },
+    {
+      "city": "Laundry",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -26.17755122,
+      "lng": 7.928607710293312
+    },
+    {
+      "city": "Tailor",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.171962,
+      "lng": 7.910801611293501
+    },
+    {
+      "city": "R",
+      "province": "Limpopo",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -26.19068642,
+      "lng": 7.867890948294282
+    },
+    {
+      "city": "Finances",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -26.19454582,
+      "lng": 7.86575813294396
+    },
+    {
+      "city": "SowetoZola",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -26.23764772,
+      "lng": 7.840166610297083
+    },
+    {
+      "city": "SpazaMogale City",
+      "province": "Gauteng",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -26.200492,
+      "lng": 7.771733300243
+    },
+    {
+      "city": "L",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -28.5641422,
+      "lng": 9.7766698315259
+    },
+    {
+      "city": "LadysmithDanskraal",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -28.55377052,
+      "lng": 9.83070895153523
+    },
+    {
+      "city": "NewcastleArbor Park",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -27.78197772,
+      "lng": 9.954359261676263
+    },
+    {
+      "city": "NewcastleAmiel Park",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -27.74537782,
+      "lng": 9.92942126168686
+    },
+    {
+      "city": "T",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -27.75735523,
+      "lng": 0.06056553171692
+    },
+    {
+      "city": "Store",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -27.78087173,
+      "lng": 0.06535833172393
+    },
+    {
+      "city": "SpazaDannhauser",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -28.0512953,
+      "lng": 0.02000335183271
+    },
+    {
+      "city": "Phamacy",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -28.01986833,
+      "lng": 0.05731554183836
+    },
+    {
+      "city": "uMfolozi",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -28.7152313,
+      "lng": 2.1659145267952
+    },
+    {
+      "city": "R",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -28.75799063,
+      "lng": 2.13331754268918
+    },
+    {
+      "city": "Richards BayArb",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -28.765233,
+      "lng": 2.077965270431
+    },
+    {
+      "city": "SpazaRichards B",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -28.74590613,
+      "lng": 2.09473566271298
+    },
+    {
+      "city": "Richards BayBir",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -28.73870433,
+      "lng": 2.09813894271929
+    },
+    {
+      "city": "SpazaMtubatuba",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -28.43036073,
+      "lng": 2.14136016306349
+    },
+    {
+      "city": "Cafeu",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -28.88324333,
+      "lng": 1.903617319397
+    },
+    {
+      "city": "Sandfields",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -29.53986543,
+      "lng": 1.14329513341768
+    },
+    {
+      "city": "Maidstone",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -29.55297883,
+      "lng": 1.14287694342071
+    },
+    {
+      "city": "SpazaCanelands",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.62621633,
+      "lng": 1.05532654343723
+    },
+    {
+      "city": "Grangetown",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -29.64479153,
+      "lng": 1.03537783344471
+    },
+    {
+      "city": "Southridge",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -29.65967863,
+      "lng": 1.06810277345116
+    },
+    {
+      "city": "Waterloo",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.66039413,
+      "lng": 1.07345984345217
+    },
+    {
+      "city": "SpazaWaterloo",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -29.66743613,
+      "lng": 1.06409465345362
+    },
+    {
+      "city": "Shastri Park",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -29.67518773,
+      "lng": 1.01505344347641
+    },
+    {
+      "city": "Rietrivier",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.66777223,
+      "lng": 1.01218614347817
+    },
+    {
+      "city": "Trenance Manor",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -29.68206683,
+      "lng": 0.9914161434813
+    },
+    {
+      "city": "s",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.68942343,
+      "lng": 0.96990226348617
+    },
+    {
+      "city": "SpazaShembes Village",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -29.70965233,
+      "lng": 0.95074545350985
+    },
+    {
+      "city": "Shembes Village",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -29.70683143,
+      "lng": 0.9544673335106
+    },
+    {
+      "city": "SpazaOhlange",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -29.69962423,
+      "lng": 0.95176773351315
+    },
+    {
+      "city": "Large car washe",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -29.69966043,
+      "lng": 0.93546074351625
+    },
+    {
+      "city": "Mount Moriah",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.73861433,
+      "lng": 1.01440895355919
+    },
+    {
+      "city": "DurbanSpringfield",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -29.81615333,
+      "lng": 1.00040995360975
+    },
+    {
+      "city": "DurbanPalmiet",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -29.80462113,
+      "lng": 0.96486595361703
+    },
+    {
+      "city": "Atholl Heights",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -29.79878233,
+      "lng": 0.90640239362778
+    },
+    {
+      "city": "Zamokuhle",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.7729153,
+      "lng": 0.86896675364782
+    },
+    {
+      "city": "SpazaCaversham Glen",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -29.84593233,
+      "lng": 0.85223144366192
+    },
+    {
+      "city": "Dassenhoek",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -29.86320553,
+      "lng": 0.79981854369437
+    },
+    {
+      "city": "Thornwood",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.85400923,
+      "lng": 0.80919236370167
+    },
+    {
+      "city": "Ashley",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -29.82194623,
+      "lng": 0.84300265371845
+    },
+    {
+      "city": "Botha's Hill",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -29.71914313,
+      "lng": 0.73990925374208
+    },
+    {
+      "city": "Tarven",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -29.72045713,
+      "lng": 0.82423083376543
+    },
+    {
+      "city": "Manors",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -29.81457893,
+      "lng": 0.8618324379343
+    },
+    {
+      "city": "Furniture",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.85126483,
+      "lng": 0.97200675383546
+    },
+    {
+      "city": "DurbanCato Manor",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -29.84980733,
+      "lng": 0.96916853383646
+    },
+    {
+      "city": "Tailore",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -29.84919413,
+      "lng": 0.94637044384196
+    },
+    {
+      "city": "DurbanChesterville",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 0,
+      "lat": -29.85444623,
+      "lng": 0.94621953384514
+    },
+    {
+      "city": "Ridgeview",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 1,
+      "lat": -29.85700243,
+      "lng": 0.94012293384655
+    },
+    {
+      "city": "DurbanJacobs",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.92695213,
+      "lng": 0.97952544386329
+    },
+    {
+      "city": "DurbanWentworth",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.92848713,
+      "lng": 1.00059024386642
+    },
+    {
+      "city": "DurbanAusterville",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.93910913,
+      "lng": 0.98939994386806
+    },
+    {
+      "city": "DurbanMerebank",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -29.95340673,
+      "lng": 0.96909065387116
+    },
+    {
+      "city": "Tavern / barFolweni",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -29.98592463,
+      "lng": 0.82819034392169
+    },
+    {
+      "city": "Folweni",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -29.99846553,
+      "lng": 0.82486063392424
+    },
+    {
+      "city": "Butcherye",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 6,
+      "lat": -30.01645233,
+      "lng": 0.90461356397298
+    },
+    {
+      "city": "Isipingo",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -29.9769673,
+      "lng": 0.93134597398474
+    },
+    {
+      "city": "Chem",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -30.05090953,
+      "lng": 0.88605864399715
+    },
+    {
+      "city": "Furnituree",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -30.20632753,
+      "lng": 0.79857354018188
+    },
+    {
+      "city": "Auto-",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 3,
+      "lat": -30.20552853,
+      "lng": 0.79844266401827
+    },
+    {
+      "city": "Medical ",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -30.20310443,
+      "lng": 0.80056374401878
+    },
+    {
+      "city": "Hibiscus Coast",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -30.74373663,
+      "lng": 0.452937534097388
+    },
+    {
+      "city": "Pietermaritzbur",
+      "province": "KwaZulu-Natal",
+      "count": 1,
+      "avgActivations": 2,
+      "lat": -29.59035633,
+      "lng": 0.433062434509016
+    },
+    {
+      "city": "Wholesale/",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -31.58955082,
+      "lng": 8.792437411605
+    },
+    {
+      "city": "N",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 9,
+      "lat": -31.53637332,
+      "lng": 9.0344933116356
+    },
+    {
+      "city": "Medical ",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -31.08026632,
+      "lng": 9.498311785
+    },
+    {
+      "city": "Grace boutique",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -31.08024832,
+      "lng": 9.498295121785
+    },
+    {
+      "city": "Transport",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 5,
+      "lat": -31.09742692,
+      "lng": 9.5725695117978
+    },
+    {
+      "city": "Finances",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 7,
+      "lat": -30.85814012,
+      "lng": 9.8529339118671
+    },
+    {
+      "city": "Butchery",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 4,
+      "lat": -31.58497992,
+      "lng": 8.7934394121992
+    },
+    {
+      "city": "Furniture",
+      "province": "Eastern Cape",
+      "count": 1,
+      "avgActivations": 8,
+      "lat": -31.58635772,
+      "lng": 8.7875169222001
+    }
+  ],
+  "byShopType": [
+    {
+      "category": "Spaza",
+      "count": 1759,
+      "avgActivations": 4.2563956793632745
+    },
+    {
+      "category": "Fresh Produce",
+      "count": 1349,
+      "avgActivations": 4.349147516679022
+    },
+    {
+      "category": "Supermarket",
+      "count": 1232,
+      "avgActivations": 4.378246753246753
+    },
+    {
+      "category": "Tuckshop",
+      "count": 1143,
+      "avgActivations": 4.3849518810148735
+    },
+    {
+      "category": "Hair & Beauty",
+      "count": 704,
+      "avgActivations": 4.495738636363637
+    },
+    {
+      "category": "Fast Food",
+      "count": 311,
+      "avgActivations": 4.501607717041801
+    },
+    {
+      "category": "Other",
+      "count": 179,
+      "avgActivations": 4.156424581005586
+    },
+    {
+      "category": "Cellphone",
+      "count": 137,
+      "avgActivations": 4.109489051094891
+    },
+    {
+      "category": "Tavern & Bar",
+      "count": 44,
+      "avgActivations": 4.75
+    },
+    {
+      "category": "Internet Cafe",
+      "count": 37,
+      "avgActivations": 4.027027027027027
+    },
+    {
+      "category": "Bottle Store",
+      "count": 17,
+      "avgActivations": 4.294117647058823
+    },
+    {
+      "category": "Construction",
+      "count": 8,
+      "avgActivations": 4.625
+    },
+    {
+      "category": "Services",
+      "count": 7,
+      "avgActivations": 5.142857142857143
+    }
+  ],
+  "hotspots": [
+    {
+      "lat": -28.42941832,
+      "lng": 1.2139099453763,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "hawassa (U)"
+    },
+    {
+      "lat": -28.42782242,
+      "lng": 1.2094631553845,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "mike (U)"
+    },
+    {
+      "lat": -28.4295722,
+      "lng": 1.2049351354069,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "mandelas (U)"
+    },
+    {
+      "lat": -28.43254782,
+      "lng": 1.2089214654211,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Naimah Ahmed (U)"
+    },
+    {
+      "lat": -28.43767712,
+      "lng": 1.2083864954308,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "new shop (U)"
+    },
+    {
+      "lat": -28.43982792,
+      "lng": 1.2120301454458,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "pabalello mini (U)"
+    },
+    {
+      "lat": -28.43422132,
+      "lng": 1.2150979354733,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "pick n save (U)"
+    },
+    {
+      "lat": -28.43429112,
+      "lng": 1.2161287354767,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "addis ababa 1 (U)"
+    },
+    {
+      "lat": -28.44474952,
+      "lng": 1.2240308355068,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "super m (U)"
+    },
+    {
+      "lat": -28.45529542,
+      "lng": 1.2302877555746,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Tasfaye (U)"
+    },
+    {
+      "lat": -28.4463982,
+      "lng": 1.2029402956431,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Mulatu (U)"
+    },
+    {
+      "lat": -28.44731822,
+      "lng": 1.2031718956444,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "goedkoop (U)"
+    },
+    {
+      "lat": -28.44577422,
+      "lng": 1.1973955656543,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Vergenoeg (Ç)"
+    },
+    {
+      "lat": -28.45395262,
+      "lng": 1.1964413356689,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "black (U)"
+    },
+    {
+      "lat": -28.4509472,
+      "lng": 1.2135912957447,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "bubby (Ç)"
+    },
+    {
+      "lat": -28.45475732,
+      "lng": 1.2079314357683,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Rosedale (U)"
+    },
+    {
+      "lat": -28.45601722,
+      "lng": 1.2219276958218,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Adam (U)"
+    },
+    {
+      "lat": -28.45813192,
+      "lng": 1.2231804358354,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "unified 2 (U)"
+    },
+    {
+      "lat": -28.77435532,
+      "lng": 0.6227433471679,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "fashion discount (K)"
+    },
+    {
+      "lat": -28.78734392,
+      "lng": 0.6282522272209,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "white flash (K)"
+    },
+    {
+      "lat": -28.77561472,
+      "lng": 0.6225972672465,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "BD Supermarket (K)"
+    },
+    {
+      "lat": -28.48277612,
+      "lng": 1.2736975581662,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "blue louisvalle (U)"
+    },
+    {
+      "lat": -28.77807842,
+      "lng": 4.76732538127988,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Thomas rt (Sol Plaatje)"
+    },
+    {
+      "lat": -28.78034222,
+      "lng": 4.7771447512812,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "no name16 lemonwood (Sol Plaatje)"
+    },
+    {
+      "lat": -28.75724912,
+      "lng": 4.7852194312859,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "bismillah cafe (Sol Plaatje)"
+    },
+    {
+      "lat": -28.74116642,
+      "lng": 4.76311868129297,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "diamond (Sol Plaatje)"
+    },
+    {
+      "lat": -28.73593862,
+      "lng": 4.7626494129651,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "jeeriks (Sol Plaatje)"
+    },
+    {
+      "lat": -28.73535552,
+      "lng": 4.76211073129675,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "discount cash (Sol Plaatje)"
+    },
+    {
+      "lat": -28.73424472,
+      "lng": 4.7614217129745,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "naaz (Sol Plaatje)"
+    },
+    {
+      "lat": -28.73663252,
+      "lng": 4.75416954129873,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "overland (Sol Plaatje)"
+    },
+    {
+      "lat": -28.73634532,
+      "lng": 4.753684312988,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "fast food (Sol Plaatje)"
+    },
+    {
+      "lat": -28.72978492,
+      "lng": 4.73228743130281,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "misa (Sol Plaatje)"
+    },
+    {
+      "lat": -28.72736672,
+      "lng": 4.74094946130437,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Atnoza (Sol Plaatje)"
+    },
+    {
+      "lat": -28.72763822,
+      "lng": 4.7409841313044,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "dozy (Sol Plaatje)"
+    },
+    {
+      "lat": -28.72827132,
+      "lng": 4.7428899313052,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "hyper (Sol Plaatje)"
+    },
+    {
+      "lat": -28.7238032,
+      "lng": 4.74475863130693,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "no name 21stone (KimberleyGaleshewe)"
+    },
+    {
+      "lat": -28.72845572,
+      "lng": 4.75267364130835,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Melissa (Sol Plaatje)"
+    },
+    {
+      "lat": -28.72923142,
+      "lng": 4.75334415130852,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "chemi clean (Sol Plaatje)"
+    },
+    {
+      "lat": -28.72976012,
+      "lng": 4.75343038130858,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Medina (KimberleyGemdene)"
+    },
+    {
+      "lat": -28.71642772,
+      "lng": 4.7500264131072,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "no name (S)"
+    },
+    {
+      "lat": -28.71807372,
+      "lng": 4.74846893131314,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "mine (S)"
+    },
+    {
+      "lat": -28.71887962,
+      "lng": 4.71464253132091,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "bhuiyan (S)"
+    },
+    {
+      "lat": -28.72827672,
+      "lng": 4.713031712132512,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "ha phake (Sol Plaatje)"
+    },
+    {
+      "lat": -28.72130342,
+      "lng": 4.703542718133253,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "cartollo (K)"
+    },
+    {
+      "lat": -28.7214392,
+      "lng": 4.70136614133367,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "African (K)"
+    },
+    {
+      "lat": -28.72074662,
+      "lng": 4.69958973133397,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "gg (K)"
+    },
+    {
+      "lat": -28.72044542,
+      "lng": 4.69617263133436,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "no name (K)"
+    },
+    {
+      "lat": -28.71584052,
+      "lng": 4.69560693133603,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "Gt (K)"
+    },
+    {
+      "lat": -28.71239822,
+      "lng": 4.6976885133906,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "but (K)"
+    },
+    {
+      "lat": -28.71349462,
+      "lng": 4.7166965134734,
+      "count": 1,
+      "totalActivations": 9,
+      "label": "enterprise mini market (S)"
+    }
+  ],
+  "depotCandidates": [
+    {
+      "id": "depot-0",
+      "label": "P Hub",
+      "city": "P",
+      "province": "Limpopo",
+      "lat": -23.86984007886122,
+      "lng": 9.49466543726801,
+      "shopCount": 281
+    },
+    {
+      "id": "depot-1",
+      "label": "C Hub",
+      "city": "C",
+      "province": "Gauteng",
+      "lat": -25.77328354464286,
+      "lng": 8.108214212267066,
+      "shopCount": 224
+    },
+    {
+      "id": "depot-2",
+      "label": "Greater Tubatse Hub",
+      "city": "Greater Tubatse",
+      "province": "Limpopo",
+      "lat": -24.71527872927463,
+      "lng": 0.17414304354888874,
+      "shopCount": 193
+    },
+    {
+      "id": "depot-3",
+      "label": "S Hub",
+      "city": "S",
+      "province": "Northern Cape",
+      "lat": -28.68625144089383,
+      "lng": 4.656745111676094,
+      "shopCount": 179
+    },
+    {
+      "id": "depot-4",
+      "label": "G Hub",
+      "city": "G",
+      "province": "Limpopo",
+      "lat": -24.592476778305087,
+      "lng": 1.993515106117375,
+      "shopCount": 177
+    },
+    {
+      "id": "depot-5",
+      "label": "Sol Plaatje Hub",
+      "city": "Sol Plaatje",
+      "province": "Northern Cape",
+      "lat": -28.730797246086972,
+      "lng": 4.752585171837178,
+      "shopCount": 161
+    },
+    {
+      "id": "depot-6",
+      "label": "U Hub",
+      "city": "U",
+      "province": "Northern Cape",
+      "lat": -28.447873992327043,
+      "lng": 1.2204205991548331,
+      "shopCount": 159
+    },
+    {
+      "id": "depot-7",
+      "label": "G Hub",
+      "city": "G",
+      "province": "Mpumalanga",
+      "lat": -26.528611924810132,
+      "lng": 9.161976990214042,
+      "shopCount": 158
+    },
+    {
+      "id": "depot-8",
+      "label": "M Hub",
+      "city": "M",
+      "province": "North West",
+      "lat": -25.90802401306124,
+      "lng": 7.484834323456016,
+      "shopCount": 147
+    },
+    {
+      "id": "depot-9",
+      "label": "S Hub",
+      "city": "S",
+      "province": "Free State",
+      "lat": -28.719635464492768,
+      "lng": 7.680008041366294,
+      "shopCount": 138
+    },
+    {
+      "id": "depot-10",
+      "label": "B Hub",
+      "city": "B",
+      "province": "Free State",
+      "lat": -29.174454168346458,
+      "lng": 6.3070586890744496,
+      "shopCount": 127
+    },
+    {
+      "id": "depot-11",
+      "label": "C Hub",
+      "city": "C",
+      "province": "Western Cape",
+      "lat": -33.957748317920014,
+      "lng": 8.67480563668328,
+      "shopCount": 125
+    },
+    {
+      "id": "depot-12",
+      "label": "M Hub",
+      "city": "M",
+      "province": "Mpumalanga",
+      "lat": -26.09430344105692,
+      "lng": 7.169084475970019,
+      "shopCount": 123
+    },
+    {
+      "id": "depot-13",
+      "label": "N Hub",
+      "city": "N",
+      "province": "KwaZulu-Natal",
+      "lat": -27.82790835957984,
+      "lng": 0.19507421607450356,
+      "shopCount": 119
+    },
+    {
+      "id": "depot-14",
+      "label": "M Hub",
+      "city": "M",
+      "province": "Limpopo",
+      "lat": -24.43594412724769,
+      "lng": 8.858437390828488,
+      "shopCount": 109
+    },
+    {
+      "id": "depot-15",
+      "label": "P Hub",
+      "city": "P",
+      "province": "North West",
+      "lat": -26.734890489629638,
+      "lng": 7.031466498841717,
+      "shopCount": 108
+    },
+    {
+      "id": "depot-16",
+      "label": "e Hub",
+      "city": "e",
+      "province": "Mpumalanga",
+      "lat": -25.86817171941748,
+      "lng": 9.151302660875686,
+      "shopCount": 103
+    },
+    {
+      "id": "depot-17",
+      "label": "e Hub",
+      "city": "e",
+      "province": "KwaZulu-Natal",
+      "lat": -29.868429021960782,
+      "lng": 0.8911582900450955,
+      "shopCount": 102
+    },
+    {
+      "id": "depot-18",
+      "label": "M Hub",
+      "city": "M",
+      "province": "Free State",
+      "lat": -28.42213738714287,
+      "lng": 7.461791513110684,
+      "shopCount": 98
+    },
+    {
+      "id": "depot-19",
+      "label": "R Hub",
+      "city": "R",
+      "province": "North West",
+      "lat": -25.61894848787233,
+      "lng": 7.248615493845512,
+      "shopCount": 94
+    }
+  ],
+  "coverageGaps": [
+    {
+      "suburb": "r Kenneth Kaunda District Municipality Ventersdorp Ward 4",
+      "city": "D",
+      "province": "North West",
+      "shopCount": 3,
+      "avgActivations": 0.6666666666666666
+    },
+    {
+      "suburb": "Chesterville",
+      "city": "Chesterville",
+      "province": "KwaZulu-Natal",
+      "shopCount": 3,
+      "avgActivations": 0.6666666666666666
+    },
+    {
+      "suburb": "oretele Local MunicipalityMoretele Ward 28",
+      "city": "M",
+      "province": "North West",
+      "shopCount": 3,
+      "avgActivations": 1
+    },
+    {
+      "suburb": "ustenburgRustenburg Ward 7",
+      "city": "R",
+      "province": "North West",
+      "shopCount": 3,
+      "avgActivations": 1
+    },
+    {
+      "suburb": "Local MunicipalityWindsdor",
+      "city": "Rustenburg",
+      "province": "North West",
+      "shopCount": 4,
+      "avgActivations": 1
+    },
+    {
+      "suburb": "amusa Local MunicipalityMamusa Ward 7",
+      "city": "M",
+      "province": "North West",
+      "shopCount": 3,
+      "avgActivations": 1
+    },
+    {
+      "suburb": "andtonJohannesburg Ward 108",
+      "city": "S",
+      "province": "Gauteng",
+      "shopCount": 3,
+      "avgActivations": 1
+    },
+    {
+      "suburb": "ongoma Local MunicipalityNongoma Ward 19",
+      "city": "N",
+      "province": "KwaZulu-Natal",
+      "shopCount": 4,
+      "avgActivations": 1
+    },
+    {
+      "suburb": "lokwe Local MunicipalityTlokwe Ward 15",
+      "city": "T",
+      "province": "North West",
+      "shopCount": 8,
+      "avgActivations": 1.125
+    },
+    {
+      "suburb": "otchefstroomTlokwe Ward 19",
+      "city": "P",
+      "province": "North West",
+      "shopCount": 7,
+      "avgActivations": 1.1428571428571428
+    },
+    {
+      "suburb": "ovan Mbeki Local MunicipalityGovan Mbeki Ward 4",
+      "city": "G",
+      "province": "Mpumalanga",
+      "shopCount": 3,
+      "avgActivations": 1.3333333333333333
+    },
+    {
+      "suburb": "Local MunicipalityLakeside",
+      "city": "Abaqulusi",
+      "province": "KwaZulu-Natal",
+      "shopCount": 3,
+      "avgActivations": 1.3333333333333333
+    },
+    {
+      "suburb": "Berkshire Downs",
+      "city": "Berkshire Downs",
+      "province": "KwaZulu-Natal",
+      "shopCount": 5,
+      "avgActivations": 1.4
+    },
+    {
+      "suburb": "MalahleniEmalahleni Ward 1",
+      "city": "e",
+      "province": "Mpumalanga",
+      "shopCount": 4,
+      "avgActivations": 1.5
+    },
+    {
+      "suburb": "reater Tubatse Local MunicipalityGreater Tubatse Ward 27",
+      "city": "G",
+      "province": "Limpopo",
+      "shopCount": 4,
+      "avgActivations": 1.5
+    },
+    {
+      "suburb": "ihlabeng Local MunicipalityDihlabeng Ward 8",
+      "city": "D",
+      "province": "Free State",
+      "shopCount": 4,
+      "avgActivations": 1.5
+    },
+    {
+      "suburb": "Local MunicipalitySiyathuthuka",
+      "city": "Emakhazeni",
+      "province": "Mpumalanga",
+      "shopCount": 5,
+      "avgActivations": 1.6
+    },
+    {
+      "suburb": "akhado Local MunicipalityMakhado Ward 17",
+      "city": "M",
+      "province": "Limpopo",
+      "shopCount": 3,
+      "avgActivations": 1.6666666666666667
+    },
+    {
+      "suburb": "oqhaka Local MunicipalityMoqhaka Ward 18",
+      "city": "M",
+      "province": "Free State",
+      "shopCount": 3,
+      "avgActivations": 1.6666666666666667
+    },
+    {
+      "suburb": "ihlabeng Local MunicipalityDihlabeng Ward 9",
+      "city": "D",
+      "province": "Free State",
+      "shopCount": 3,
+      "avgActivations": 1.6666666666666667
+    },
+    {
+      "suburb": "PolokwaneBlood River",
+      "city": "PolokwaneBlood River",
+      "province": "Limpopo",
+      "shopCount": 7,
+      "avgActivations": 1.7142857142857142
+    },
+    {
+      "suburb": "nKhara Hais Local MunicipalityÇnKhara Hais Ward 1",
+      "city": "Ç",
+      "province": "Northern Cape",
+      "shopCount": 4,
+      "avgActivations": 1.75
+    },
+    {
+      "suburb": "a-Segonyana Local MunicipalityGa-Segonyana Ward 13",
+      "city": "G",
+      "province": "Northern Cape",
+      "shopCount": 4,
+      "avgActivations": 1.75
+    },
+    {
+      "suburb": "r JS Moroka Local MunicipalityDr JS Moroka Ward 5",
+      "city": "D",
+      "province": "Mpumalanga",
+      "shopCount": 4,
+      "avgActivations": 1.75
+    },
+    {
+      "suburb": "atlosana Local MunicipalityMatlosana Ward 33",
+      "city": "M",
+      "province": "North West",
+      "shopCount": 4,
+      "avgActivations": 1.75
+    },
+    {
+      "suburb": "Thekwini Ward 8",
+      "city": "e",
+      "province": "KwaZulu-Natal",
+      "shopCount": 4,
+      "avgActivations": 1.75
+    },
+    {
+      "suburb": "aluti-a-Phofung Local MunicipalityMaluti-a-Phofung Ward 22",
+      "city": "M",
+      "province": "Free State",
+      "shopCount": 5,
+      "avgActivations": 1.8
+    },
+    {
+      "suburb": "is Hani",
+      "city": "BloemfonteinChr",
+      "province": "Free State",
+      "shopCount": 6,
+      "avgActivations": 1.8333333333333333
+    },
+    {
+      "suburb": "Cape135A, , Cape Town,",
+      "city": "Du NoonWestern",
+      "province": "Western Cape",
+      "shopCount": 3,
+      "avgActivations": 2
+    },
+    {
+      "suburb": "sukaligwaMsukaligwa Ward 13",
+      "city": "M",
+      "province": "Mpumalanga",
+      "shopCount": 4,
+      "avgActivations": 2
+    }
+  ]
+}
