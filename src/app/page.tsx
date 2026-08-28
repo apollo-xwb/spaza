@@ -35,10 +35,10 @@ export default function HomePage() {
 
   if (shops.length === 0) {
     return (
-      <div className="flex h-[100dvh] items-center justify-center bg-hud-bg text-white">
+      <div className="flex h-[100dvh] items-center justify-center bg-surface text-primary">
         <div className="text-center px-6">
           <h1 className="text-xl font-semibold mb-2">No shop data found</h1>
-          <p className="text-white/50 text-sm">Run npm run extract-data to load the dataset.</p>
+          <p className="text-muted text-sm">Run npm run extract-data to load the dataset.</p>
         </div>
       </div>
     );

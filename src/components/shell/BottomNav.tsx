@@ -17,7 +17,7 @@ interface BottomNavProps {
 
 export default function BottomNav({ active, onChange, routeCount = 0 }: BottomNavProps) {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 glass-panel-strong border-t border-white/10 pb-safe-bottom md:hidden">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 glass-panel-strong border-t border-border pb-safe-bottom md:hidden">
       <div className="flex items-stretch justify-around px-1 pt-1">
         {TABS.map((tab) => {
           const isActive = active === tab.id;
@@ -26,7 +26,7 @@ export default function BottomNav({ active, onChange, routeCount = 0 }: BottomNa
               key={tab.id}
               onClick={() => onChange(tab.id)}
               className={`relative flex flex-1 flex-col items-center gap-0.5 py-2 transition ${
-                isActive ? "text-hud-cyan" : "text-white/40"
+                isActive ? "text-accent-teal" : "text-muted"
               }`}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -34,11 +34,11 @@ export default function BottomNav({ active, onChange, routeCount = 0 }: BottomNa
               </svg>
               <span className="text-[10px] font-medium">{tab.label}</span>
               {tab.id === "routes" && routeCount > 0 && (
-                <span className="absolute right-1/4 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-hud-amber text-[9px] font-bold text-black">
+                <span className="absolute right-1/4 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[9px] font-bold text-black">
                   {routeCount}
                 </span>
               )}
-              {isActive && <span className="absolute -top-1 h-0.5 w-8 rounded-full bg-hud-cyan" />}
+              {isActive && <span className="absolute -top-1 h-0.5 w-8 rounded-full bg-accent-teal" />}
             </button>
           );
         })}

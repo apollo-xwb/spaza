@@ -19,17 +19,17 @@ export default function InsightPillStrip({ stats, live }: InsightPillStripProps)
   ];
 
   return (
-    <div className="absolute bottom-[calc(4.5rem+env(safe-area-inset-bottom))] left-0 right-0 z-20 px-3 md:bottom-6 md:left-auto md:right-4 md:max-w-md">
+    <div className="absolute bottom-6 left-0 right-0 z-20 px-3 hidden md:block md:left-auto md:right-4 md:max-w-md">
       <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-1 md:flex-wrap">
         {pills.map((p) => (
           <div
             key={p.label}
             className={`glass-panel shrink-0 rounded-xl px-3 py-2 ${
-              p.accent ? "border-hud-cyan/30 hud-glow-cyan" : ""
+              p.accent ? "border-accent-teal/30 glow-teal" : ""
             }`}
           >
-            <div className="text-[9px] uppercase tracking-widest text-white/40">{p.label}</div>
-            <div className={`text-sm font-semibold tabular-nums ${p.accent ? "text-hud-cyan" : "text-white"}`}>
+            <div className="text-[9px] uppercase tracking-widest text-muted">{p.label}</div>
+            <div className={`text-sm font-semibold tabular-nums ${p.accent ? "text-accent-teal" : "text-primary"}`}>
               {p.value}
             </div>
           </div>

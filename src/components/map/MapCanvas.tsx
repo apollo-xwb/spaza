@@ -1,14 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useCallback, useImperativeHandle, forwardRef } from "react";
+import { useEffect, useRef, useCallback, useImperativeHandle, forwardRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import type { Shop, OptimizedRoute } from "@/types";
 import { getCategoryColor, TIER_COLORS } from "@/lib/utils";
 import { shopsToGeoJSON } from "@/lib/shop-data";
 import { createBlipElement } from "@/components/map/BlipMarker";
 
-const MAP_STYLE = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
-const BLIP_ZOOM_THRESHOLD = 11;
+const MAP_STYLE = "https://tiles.openfreemap.org/styles/bright";
+const BLIP_ZOOM_DESKTOP = 11;
+const BLIP_ZOOM_MOBILE = 9;
+const BLIP_LIMIT_DESKTOP = 200;
+const BLIP_LIMIT_MOBILE = 300;
 
 export interface MapCanvasHandle {
   resize: () => void;
@@ -29,6 +32,7 @@ interface MapCanvasProps {
   onViewportChange?: (bounds: maplibregl.LngLatBounds, center: { lat: number; lng: number }) => void;
   depotMode: boolean;
   depot: { lat: number; lng: number } | null;
+  isMobile?: boolean;
 }
 
 function propsToShop(props: Record<string, unknown>): Shop {
@@ -50,17 +54,25 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
     onViewportChange,
     depotMode,
     depot,
+    isMobile = false,
   },
   ref
 ) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
   const markersRef = useRef<maplibregl.Marker[]>([]);
   const shopsRef = useRef(shops);
   shopsRef.current = shops;
 
+  const isMobileRef = useRef(isMobile);
+  isMobileRef.current = isMobile;
+
   const callbacksRef = useRef({ onShopSelect, onShopToggle, onDepotPick, depotMode });
   callbacksRef.current = { onShopSelect, onShopToggle, onDepotPick, depotMode };
+
+  const getBlipZoom = () => (isMobileRef.current ? BLIP_ZOOM_MOBILE : BLIP_ZOOM_DESKTOP);
+  const getBlipLimit = () => (isMobileRef.current ? BLIP_LIMIT_MOBILE : BLIP_LIMIT_DESKTOP);
 
   const updateBlips = useCallback(() => {
     const map = mapRef.current;
@@ -69,7 +81,8 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
     markersRef.current.forEach((m) => m.remove());
     markersRef.current = [];
 
-    if (map.getZoom() < BLIP_ZOOM_THRESHOLD) return;
+    const threshold = getBlipZoom();
+    if (map.getZoom() < threshold) return;
 
     const bounds = map.getBounds();
     const visible = shopsRef.current.filter(
@@ -80,7 +93,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         s.lat <= bounds.getNorth()
     );
 
-    const limit = Math.min(visible.length, 200);
+    const limit = Math.min(visible.length, getBlipLimit());
     for (let i = 0; i < limit; i++) {
       const shop = visible[i];
       const selected = selectedShopIds.has(shop.id) || selectedShop?.id === shop.id;
@@ -115,6 +128,8 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
+    const blipZoom = getBlipZoom();
+
     const map = new maplibregl.Map({
       container: containerRef.current,
       style: MAP_STYLE,
@@ -130,7 +145,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         type: "geojson",
         data: shopsToGeoJSON(shopsRef.current),
         cluster: true,
-        clusterMaxZoom: BLIP_ZOOM_THRESHOLD - 1,
+        clusterMaxZoom: blipZoom - 1,
         clusterRadius: 50,
       });
 
@@ -147,13 +162,13 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
           "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 5, 0.5, 12, 2],
           "heatmap-color": [
             "interpolate", ["linear"], ["heatmap-density"],
-            0, "rgba(0,229,255,0)",
-            0.3, "rgba(0,229,255,0.3)",
-            0.6, "rgba(232,184,74,0.6)",
-            1, "rgba(232,184,74,0.9)",
+            0, "rgba(13,148,136,0)",
+            0.3, "rgba(13,148,136,0.35)",
+            0.6, "rgba(231,138,62,0.55)",
+            1, "rgba(231,138,62,0.85)",
           ],
           "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 5, 15, 12, 30],
-          "heatmap-opacity": 0.7,
+          "heatmap-opacity": 0.65,
         },
       });
 
@@ -163,11 +178,11 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         source: "shops",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": ["step", ["get", "point_count"], "rgba(0,229,255,0.6)", 50, "rgba(0,229,255,0.75)", 200, "rgba(232,184,74,0.85)"],
+          "circle-color": ["step", ["get", "point_count"], "rgba(13,148,136,0.55)", 50, "rgba(13,148,136,0.7)", 200, "rgba(231,138,62,0.8)"],
           "circle-radius": ["step", ["get", "point_count"], 20, 50, 28, 200, 36],
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#00E5FF",
-          "circle-blur": 0.15,
+          "circle-stroke-color": "#0D9488",
+          "circle-blur": 0.1,
         },
       });
 
@@ -192,9 +207,9 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         paint: {
           "circle-color": ["get", "color"],
           "circle-radius": ["interpolate", ["linear"], ["get", "activations"], 1, 5, 10, 8, 20, 11],
-          "circle-stroke-width": ["case", ["==", ["get", "selected"], true], 3, 1],
-          "circle-stroke-color": ["case", ["==", ["get", "selected"], true], "#00E5FF", "rgba(255,255,255,0.4)"],
-          "circle-opacity": 0.9,
+          "circle-stroke-width": ["case", ["==", ["get", "selected"], true], 3, 1.5],
+          "circle-stroke-color": ["case", ["==", ["get", "selected"], true], "#0D9488", "rgba(255,255,255,0.9)"],
+          "circle-opacity": 0.92,
         },
       });
 
@@ -202,12 +217,12 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       map.addLayer({
         id: "route-glow", type: "line", source: "route",
         layout: { "line-join": "round", "line-cap": "round" },
-        paint: { "line-color": "#E8B84A", "line-width": 8, "line-blur": 4, "line-opacity": 0.4 },
+        paint: { "line-color": "#E78A3E", "line-width": 8, "line-blur": 4, "line-opacity": 0.35 },
       });
       map.addLayer({
         id: "route-line", type: "line", source: "route",
         layout: { "line-join": "round", "line-cap": "round" },
-        paint: { "line-color": "#E8B84A", "line-width": 3, "line-dasharray": [2, 1] },
+        paint: { "line-color": "#E78A3E", "line-width": 3, "line-dasharray": [2, 1] },
       });
 
       map.addSource("selection-radar", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
@@ -215,10 +230,10 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         id: "selection-radar-ring", type: "circle", source: "selection-radar",
         paint: {
           "circle-radius": 45,
-          "circle-color": "rgba(0,229,255,0.12)",
+          "circle-color": "rgba(13,148,136,0.1)",
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#00E5FF",
-          "circle-opacity": 0.7,
+          "circle-stroke-color": "#0D9488",
+          "circle-opacity": 0.75,
         },
       });
 
@@ -227,10 +242,10 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         id: "opportunity-circles", type: "circle", source: "opportunity",
         layout: { visibility: showOpportunity ? "visible" : "none" },
         paint: {
-          "circle-color": "rgba(255,100,50,0.25)",
+          "circle-color": "rgba(231,138,62,0.2)",
           "circle-radius": 30,
-          "circle-stroke-width": 1,
-          "circle-stroke-color": "rgba(255,100,50,0.6)",
+          "circle-stroke-width": 1.5,
+          "circle-stroke-color": "rgba(231,138,62,0.55)",
         },
       });
 
@@ -238,7 +253,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       map.addLayer({
         id: "depot-marker", type: "circle", source: "depot",
         paint: {
-          "circle-color": "#E8B84A",
+          "circle-color": "#E78A3E",
           "circle-radius": 12,
           "circle-stroke-width": 3,
           "circle-stroke-color": "#ffffff",
@@ -246,6 +261,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       });
 
       updateBlips();
+      setMapLoaded(true);
     });
 
     map.on("click", "clusters", (e) => {
@@ -304,13 +320,16 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       markersRef.current.forEach((m) => m.remove());
       map.remove();
       mapRef.current = null;
+      setMapLoaded(false);
     };
   }, [onViewportChange, showHeatmap, showOpportunity, updateBlips]);
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map?.isStyleLoaded()) return;
+    if (!map || !mapLoaded) return;
+    if (!map.getSource("shops")) return;
 
+    const threshold = getBlipZoom();
     const geojson = shopsToGeoJSON(shops);
     geojson.features = geojson.features.map((f) => {
       const shop = f.properties as unknown as Shop;
@@ -333,15 +352,15 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       map.setLayoutProperty("heatmap-layer", "visibility", showHeatmap ? "visible" : "none");
     }
     if (map.getLayer("unclustered-point")) {
-      map.setLayoutProperty("unclustered-point", "visibility", map.getZoom() >= BLIP_ZOOM_THRESHOLD ? "none" : "visible");
+      map.setLayoutProperty("unclustered-point", "visibility", map.getZoom() >= threshold ? "none" : "visible");
     }
 
     updateBlips();
-  }, [shops, selectedShop, selectedShopIds, showHeatmap, updateBlips]);
+  }, [shops, selectedShop, selectedShopIds, showHeatmap, isMobile, mapLoaded, updateBlips]);
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map?.isStyleLoaded()) return;
+    if (!map || !mapLoaded) return;
     const source = map.getSource("route") as maplibregl.GeoJSONSource | undefined;
     if (!route || route.coordinates.length < 2) {
       source?.setData({ type: "FeatureCollection", features: [] });
@@ -356,7 +375,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map?.isStyleLoaded()) return;
+    if (!map || !mapLoaded) return;
     const source = map.getSource("selection-radar") as maplibregl.GeoJSONSource | undefined;
     if (!selectedShop) {
       source?.setData({ type: "FeatureCollection", features: [] });
@@ -379,7 +398,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map?.isStyleLoaded()) return;
+    if (!map || !mapLoaded) return;
     const source = map.getSource("depot") as maplibregl.GeoJSONSource | undefined;
     if (!depot) {
       source?.setData({ type: "FeatureCollection", features: [] });
@@ -393,7 +412,8 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map?.isStyleLoaded()) return;
+    if (!map || !mapLoaded) return;
+    if (!map.getSource("opportunity")) return;
     const features = opportunityZones.map((z) => ({
       type: "Feature" as const,
       properties: { score: z.opportunityScore },

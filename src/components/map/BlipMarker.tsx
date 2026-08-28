@@ -76,7 +76,7 @@ function renderBlipHtml(shop: Shop, selected: boolean, inRoute: boolean): string
     <div class="blip-inner ${selected ? "blip-selected" : ""} ${inRoute ? "blip-route" : ""}" style="width:${size}px;height:${size}px">
       <div class="blip-pulse" style="border-color:${tierColor}"></div>
       <div class="blip-pulse blip-pulse-delay" style="border-color:${tierColor}"></div>
-      <div class="blip-core" style="background:${color};box-shadow:0 0 12px ${tierColor}80">
+      <div class="blip-core" style="background:${color};box-shadow:0 2px 8px rgba(0,0,0,0.18),0 0 10px ${tierColor}60">
         <span class="blip-count">${shop.activations}</span>
       </div>
     </div>
@@ -95,7 +95,7 @@ export default function BlipMarker({ shop, selected, inRoute, onTap, onLongPress
         className="blip-core"
         style={{
           background: getCategoryColor(shop.shopTypeCategory),
-          boxShadow: `0 0 12px ${TIER_COLORS[shop.activationTier]}80`,
+          boxShadow: `0 2px 8px rgba(0,0,0,0.18), 0 0 10px ${TIER_COLORS[shop.activationTier]}60`,
         }}
       >
         <span className="blip-count">{shop.activations}</span>

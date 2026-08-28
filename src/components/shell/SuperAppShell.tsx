@@ -16,6 +16,7 @@ import { computeLiveInsights } from "@/lib/insights-engine";
 import type { MapCanvasHandle } from "@/components/map/MapCanvas";
 import FloatingHeader from "@/components/shell/FloatingHeader";
 import InsightPillStrip from "@/components/shell/InsightPillStrip";
+import StatsFab from "@/components/shell/StatsFab";
 import BottomNav from "@/components/shell/BottomNav";
 import ShopSheet from "@/components/shell/ShopSheet";
 import PanelSheet from "@/components/shell/PanelSheet";
@@ -114,9 +115,10 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
   }, [panelOpen, selectedShop, railCollapsed]);
 
   const showPills = activeTab === "map" && !panelOpen;
+  const showMobileStats = showPills && !isDesktop;
 
   return (
-    <div className="relative h-[100dvh] w-full overflow-hidden bg-hud-bg">
+    <div className="relative h-[100dvh] w-full overflow-hidden bg-surface map-texture">
       <MapCanvas
         ref={mapRef}
         shops={visibleShops}
@@ -132,6 +134,7 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
         onViewportChange={(_, center) => setMapCenter(center)}
         depotMode={depotMode}
         depot={depot}
+        isMobile={!isDesktop}
       />
 
       <FloatingHeader
@@ -142,6 +145,7 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
           if (!searchOpen) handleTabChange("explore");
         }}
         searchOpen={searchOpen}
+        isDesktop={isDesktop}
       />
 
       {searchOpen && (
@@ -152,12 +156,13 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
             placeholder="Search locations..."
             value={filters.search}
             onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
-            className="w-full glass-panel-strong rounded-xl border border-hud-cyan/30 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none"
+            className="w-full glass-panel-strong rounded-xl border border-accent-teal/30 px-4 py-3 text-sm text-primary placeholder:text-muted focus:outline-none focus:border-accent-teal"
           />
         </div>
       )}
 
       {showPills && <InsightPillStrip stats={stats} live={live} />}
+      {showMobileStats && <StatsFab stats={stats} live={live} />}
 
       <InsightsRail
         insights={insights}
@@ -167,8 +172,8 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
       />
 
       {isDesktop && activeTab === "routes" && (
-        <aside className="absolute right-3 top-20 bottom-6 z-30 w-80 glass-panel-strong rounded-2xl border border-white/10 overflow-y-auto scrollbar-thin p-4 hidden md:block">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-hud-amber mb-4">Route Optimizer</h2>
+        <aside className="absolute right-3 top-20 bottom-6 z-30 w-80 glass-panel-strong rounded-2xl border border-border overflow-y-auto scrollbar-thin p-4 hidden md:block grunge-pattern">
+          <h2 className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Route Optimizer</h2>
           <RouteBuilder
             mode={routeMode}
             onModeChange={setRouteMode}

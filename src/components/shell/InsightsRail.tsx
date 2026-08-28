@@ -18,7 +18,7 @@ export default function InsightsRail({ insights, live, collapsed, onToggle }: In
     return (
       <button
         onClick={onToggle}
-        className="absolute left-3 top-20 z-30 glass-panel rounded-xl px-3 py-2 text-xs text-hud-cyan hidden md:block"
+        className="absolute left-3 top-20 z-30 glass-panel rounded-xl px-3 py-2 text-xs text-accent-teal hidden md:block"
       >
         → Insights
       </button>
@@ -26,13 +26,13 @@ export default function InsightsRail({ insights, live, collapsed, onToggle }: In
   }
 
   return (
-    <aside className="absolute left-3 top-20 bottom-6 z-30 w-72 glass-panel-strong rounded-2xl border border-white/10 overflow-hidden hidden md:flex md:flex-col">
-      <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 shrink-0">
+    <aside className="absolute left-3 top-20 bottom-6 z-30 w-72 glass-panel-strong rounded-2xl border border-border overflow-hidden hidden md:flex md:flex-col grunge-pattern">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-border shrink-0">
         <div>
-          <h2 className="text-xs font-bold uppercase tracking-widest text-hud-cyan">Intelligence</h2>
-          <p className="text-[10px] text-white/40">{formatZar(live.tamZar, true)} live TAM</p>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-accent-teal">Intelligence</h2>
+          <p className="text-[10px] text-muted">{formatZar(live.tamZar, true)} live TAM</p>
         </div>
-        <button onClick={onToggle} className="text-white/40 hover:text-white text-lg">‹</button>
+        <button onClick={onToggle} className="text-muted hover:text-primary text-lg">‹</button>
       </div>
       <div className="flex-1 overflow-y-auto scrollbar-thin p-3 space-y-3">
         <InsightHero insights={insights} live={live} compact />
