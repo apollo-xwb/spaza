@@ -3,12 +3,10 @@
 import { getCategoryColor, TIER_COLORS } from "@/lib/utils";
 import type { Shop } from "@/types";
 
-interface BlipMarkerProps {
-  shop: Shop;
-  selected: boolean;
-  inRoute: boolean;
-  onTap: () => void;
-  onLongPress: () => void;
+function getInitials(name: string): string {
+  const parts = name.trim().split(/\s+/);
+  if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
+  return name.slice(0, 2).toUpperCase();
 }
 
 export function createBlipElement(
@@ -70,36 +68,24 @@ export function createBlipElement(
 function renderBlipHtml(shop: Shop, selected: boolean, inRoute: boolean): string {
   const color = getCategoryColor(shop.shopTypeCategory);
   const tierColor = TIER_COLORS[shop.activationTier];
-  const size = shop.activationTier === "elite" ? 44 : shop.activationTier === "high" ? 38 : 32;
+  const size = shop.activationTier === "elite" ? 48 : shop.activationTier === "high" ? 42 : 36;
+  const initials = getInitials(shop.shopName);
+  const statusDot = shop.hasVerifiedAddress
+    ? '<div class="blip-status"></div>'
+    : "";
 
   return `
     <div class="blip-inner ${selected ? "blip-selected" : ""} ${inRoute ? "blip-route" : ""}" style="width:${size}px;height:${size}px">
-      <div class="blip-pulse" style="border-color:${tierColor}"></div>
-      <div class="blip-pulse blip-pulse-delay" style="border-color:${tierColor}"></div>
-      <div class="blip-core" style="background:${color};box-shadow:0 2px 8px rgba(0,0,0,0.18),0 0 10px ${tierColor}60">
-        <span class="blip-count">${shop.activations}</span>
+      <div class="blip-pulse" style="border-color:${selected ? "#FFFC00" : tierColor}"></div>
+      ${selected ? '<div class="blip-pulse blip-pulse-delay" style="border-color:#C8F135"></div>' : ""}
+      <div class="blip-avatar" style="background:linear-gradient(135deg,${color},${color}cc)">
+        <span>${initials}</span>
+        ${statusDot}
       </div>
     </div>
   `;
 }
 
-export default function BlipMarker({ shop, selected, inRoute, onTap, onLongPress }: BlipMarkerProps) {
-  return (
-    <div
-      className={`blip-inner ${selected ? "blip-selected" : ""} ${inRoute ? "blip-route" : ""}`}
-      onClick={(e) => { e.stopPropagation(); onTap(); }}
-      onContextMenu={(e) => { e.preventDefault(); onLongPress(); }}
-    >
-      <div className="blip-pulse" style={{ borderColor: TIER_COLORS[shop.activationTier] }} />
-      <div
-        className="blip-core"
-        style={{
-          background: getCategoryColor(shop.shopTypeCategory),
-          boxShadow: `0 2px 8px rgba(0,0,0,0.18), 0 0 10px ${TIER_COLORS[shop.activationTier]}60`,
-        }}
-      >
-        <span className="blip-count">{shop.activations}</span>
-      </div>
-    </div>
-  );
+export default function BlipMarker() {
+  return null;
 }

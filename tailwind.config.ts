@@ -9,6 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        snap: {
+          glass: "rgba(255,255,255,0.72)",
+          dock: "rgba(28,28,30,0.88)",
+          lime: "#C8F135",
+          yellow: "#FFFC00",
+        },
+        airly: {
+          slate: "#5B6B8A",
+          mist: "#E8EDF5",
+          deep: "#3D4A63",
+        },
         ios: {
           bg: "#F2F2F7",
           card: "#FFFFFF",
@@ -24,7 +35,7 @@ const config: Config = {
           fill: "rgba(120,120,128,0.12)",
           separator: "rgba(60,60,67,0.12)",
         },
-        surface: { DEFAULT: "#F2F2F7", elevated: "#FFFFFF" },
+        surface: { DEFAULT: "#E8EDF5", elevated: "#FFFFFF" },
         primary: "#000000",
         muted: "rgba(60,60,67,0.6)",
         accent: { DEFAULT: "#007AFF", teal: "#5AC8FA", orange: "#FF9500" },
@@ -33,9 +44,10 @@ const config: Config = {
       borderRadius: {
         ios: "14px",
         "ios-lg": "20px",
+        pill: "999px",
       },
       fontFamily: {
-        sans: ["var(--font-dm-sans)", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
+        sans: ["var(--font-jakarta)", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
       },
       screens: { md: "768px" },
     },

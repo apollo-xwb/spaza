@@ -7,9 +7,9 @@ interface TierDonutProps {
 }
 
 const TIER_META = [
-  { key: "elite" as const, label: "Elite", color: "#FF9500" },
+  { key: "elite" as const, label: "Elite", color: "#FFFC00" },
   { key: "high" as const, label: "High", color: "#007AFF" },
-  { key: "medium" as const, label: "Medium", color: "#5AC8FA" },
+  { key: "medium" as const, label: "Medium", color: "#C8F135" },
   { key: "low" as const, label: "Low", color: "#8E8E93" },
 ];
 
@@ -24,15 +24,12 @@ export default function TierDonut({ tiers }: TierDonutProps) {
   }).join(", ");
 
   return (
-    <div className="ios-card p-5">
+    <div className="ios-card texture-grain relative p-5 overflow-hidden">
       <h3 className="ios-section-title mb-4">Activation Tiers</h3>
       <div className="flex flex-col md:flex-row items-center gap-6">
-        <div
-          className="donut-chart w-36 h-36 shrink-0"
-          style={{ background: `conic-gradient(${segments})` }}
-        >
+        <div className="donut-chart w-36 h-36 shrink-0" style={{ background: `conic-gradient(${segments})` }}>
           <div className="donut-hole">
-            <span className="text-2xl font-bold tabular-nums">{total.toLocaleString()}</span>
+            <span className="text-2xl font-extrabold tabular-nums">{total.toLocaleString()}</span>
             <span className="text-[10px] text-ios-secondary">shops</span>
           </div>
         </div>
@@ -43,9 +40,8 @@ export default function TierDonut({ tiers }: TierDonutProps) {
             return (
               <div key={t.key} className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: t.color }} />
-                <span className="text-sm text-ios-label flex-1">{t.label}</span>
-                <span className="text-sm font-semibold tabular-nums">{pct}%</span>
-                <span className="text-[10px] text-ios-secondary w-12 text-right">{count.toLocaleString()}</span>
+                <span className="text-sm flex-1 font-medium">{t.label}</span>
+                <span className="text-sm font-bold tabular-nums">{pct}%</span>
               </div>
             );
           })}

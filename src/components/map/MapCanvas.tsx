@@ -7,7 +7,7 @@ import { getCategoryColor, TIER_COLORS } from "@/lib/utils";
 import { shopsToGeoJSON } from "@/lib/shop-data";
 import { createBlipElement } from "@/components/map/BlipMarker";
 
-import { MAP_STYLE } from "@/lib/map-style";
+import { getMapStyle, type MapStyleMode } from "@/lib/map-style";
 const BLIP_ZOOM_DESKTOP = 11;
 const BLIP_ZOOM_MOBILE = 9;
 const BLIP_LIMIT_DESKTOP = 200;
@@ -16,6 +16,9 @@ const BLIP_LIMIT_MOBILE = 300;
 export interface MapCanvasHandle {
   resize: () => void;
   flyToShop: (shop: Shop) => void;
+  zoomIn: () => void;
+  zoomOut: () => void;
+  locate: () => void;
 }
 
 interface MapCanvasProps {
@@ -33,6 +36,7 @@ interface MapCanvasProps {
   depotMode: boolean;
   depot: { lat: number; lng: number } | null;
   isMobile?: boolean;
+  mapStyleMode?: MapStyleMode;
 }
 
 function propsToShop(props: Record<string, unknown>): Shop {
@@ -55,6 +59,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
     depotMode,
     depot,
     isMobile = false,
+    mapStyleMode = "satellite",
   },
   ref
 ) {
@@ -124,6 +129,18 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         duration: 800,
       });
     },
+    zoomIn: () => mapRef.current?.zoomIn({ duration: 300 }),
+    zoomOut: () => mapRef.current?.zoomOut({ duration: 300 }),
+    locate: () => {
+      if (!navigator.geolocation) return;
+      navigator.geolocation.getCurrentPosition((pos) => {
+        mapRef.current?.easeTo({
+          center: [pos.coords.longitude, pos.coords.latitude],
+          zoom: 12,
+          duration: 800,
+        });
+      });
+    },
   }));
 
   useEffect(() => {
@@ -133,7 +150,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
 
     const map = new maplibregl.Map({
       container: containerRef.current,
-      style: MAP_STYLE,
+      style: getMapStyle(mapStyleMode),
       center: [25.5, -29.5],
       zoom: 5,
       maxZoom: 18,
@@ -145,13 +162,14 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
     });
 
     map.on("data", (e) => {
-      if (e.dataType === "source" && e.sourceId === "carto" && e.isSourceLoaded) {
+      if (e.dataType === "source" && e.isSourceLoaded) {
         setMapError(null);
       }
     });
 
-    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
-    map.addControl(new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: false }), "bottom-right");
+    if (!isMobileRef.current) {
+      map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
+    }
 
     map.on("load", () => {
       map.addSource("shops", {
@@ -191,10 +209,10 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         source: "shops",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": ["step", ["get", "point_count"], "rgba(0,122,255,0.55)", 50, "rgba(0,122,255,0.7)", 200, "rgba(255,149,0,0.8)"],
+          "circle-color": ["step", ["get", "point_count"], "rgba(200,241,53,0.6)", 50, "rgba(200,241,53,0.75)", 200, "rgba(255,252,0,0.85)"],
           "circle-radius": ["step", ["get", "point_count"], 20, 50, 28, 200, 36],
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#007AFF",
+          "circle-stroke-color": "#C8F135",
           "circle-blur": 0.1,
         },
       });

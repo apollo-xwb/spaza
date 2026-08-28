@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState, useRef, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import type {
   Shop,
@@ -11,13 +12,14 @@ import type {
   RouteMode,
   AppTab,
 } from "@/types";
+import type { MapStyleMode } from "@/lib/map-style";
 import { filterShops, computeVisibleStats } from "@/lib/shop-data";
 import { computeLiveInsights } from "@/lib/insights-engine";
 import type { MapCanvasHandle } from "@/components/map/MapCanvas";
-import FloatingHeader from "@/components/shell/FloatingHeader";
+import { useAppNav } from "@/contexts/AppNavContext";
+import SnapMapHeader from "@/components/shell/SnapMapHeader";
+import MapFloatingControls from "@/components/shell/MapFloatingControls";
 import InsightPillStrip from "@/components/shell/InsightPillStrip";
-import StatsFab from "@/components/shell/StatsFab";
-import BottomNav from "@/components/shell/BottomNav";
 import ShopSheet from "@/components/shell/ShopSheet";
 import PanelSheet from "@/components/shell/PanelSheet";
 import InsightsRail from "@/components/shell/InsightsRail";
@@ -37,11 +39,16 @@ interface Props {
 
 export default function SuperAppShell({ shops, summaries, insights }: Props) {
   const mapRef = useRef<MapCanvasHandle>(null);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const { setRouteCount, registerPanelHandler } = useAppNav();
+
   const [activeTab, setActiveTab] = useState<AppTab>("map");
   const [panelOpen, setPanelOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [railCollapsed, setRailCollapsed] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [mapStyleMode, setMapStyleMode] = useState<MapStyleMode>("satellite");
 
   const [filters, setFilters] = useState<MapFilters>({
     search: "",
@@ -69,6 +76,32 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
     return () => window.removeEventListener("resize", check);
   }, []);
 
+  useEffect(() => {
+    setRouteCount(selectedShopIds.size);
+  }, [selectedShopIds, setRouteCount]);
+
+  useEffect(() => {
+    registerPanelHandler((tab: AppTab) => {
+      if (tab === "map") {
+        setPanelOpen(false);
+        setActiveTab("map");
+      } else {
+        setActiveTab(tab);
+        setPanelOpen(true);
+      }
+    });
+    return () => registerPanelHandler(null);
+  }, [registerPanelHandler]);
+
+  useEffect(() => {
+    const panel = searchParams.get("panel");
+    if (panel === "routes" || panel === "explore" || panel === "insights") {
+      setActiveTab(panel as AppTab);
+      setPanelOpen(true);
+      router.replace("/", { scroll: false });
+    }
+  }, [searchParams, router]);
+
   const visibleShops = useMemo(() => filterShops(shops, filters), [shops, filters]);
   const selectedShops = useMemo(() => shops.filter((s) => selectedShopIds.has(s.id)), [shops, selectedShopIds]);
   const stats = useMemo(() => computeVisibleStats(visibleShops, shops.length), [visibleShops, shops.length]);
@@ -93,15 +126,6 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
     setDepotMode(false);
   }, []);
 
-  const handleTabChange = useCallback((tab: AppTab) => {
-    setActiveTab(tab);
-    if (tab === "map") {
-      setPanelOpen(false);
-    } else {
-      setPanelOpen(true);
-    }
-  }, []);
-
   const handleRemoveShop = useCallback((id: string) => {
     setSelectedShopIds((prev) => {
       const next = new Set(prev);
@@ -110,16 +134,28 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
     });
   }, []);
 
+  const handleToggleLayers = useCallback(() => {
+    setFilters((f) => ({
+      ...f,
+      showHeatmap: !f.showHeatmap,
+      showOpportunity: !f.showOpportunity,
+    }));
+  }, []);
+
+  const handleToggleMapStyle = useCallback(() => {
+    setMapStyleMode((m) => (m === "satellite" ? "streets" : "satellite"));
+  }, []);
+
   useEffect(() => {
     mapRef.current?.resize();
   }, [panelOpen, selectedShop, railCollapsed]);
 
-  const showPills = activeTab === "map" && !panelOpen;
-  const showMobileStats = showPills && !isDesktop;
+  const layersActive = filters.showHeatmap || filters.showOpportunity;
 
   return (
-    <div className="relative h-[100dvh] w-full overflow-hidden bg-ios-bg">
+    <div className="relative h-[100dvh] w-full overflow-hidden">
       <MapCanvas
+        key={mapStyleMode}
         ref={mapRef}
         shops={visibleShops}
         selectedShop={selectedShop}
@@ -135,34 +171,43 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
         depotMode={depotMode}
         depot={depot}
         isMobile={!isDesktop}
+        mapStyleMode={mapStyleMode}
       />
 
-      <FloatingHeader
-        stats={stats}
-        live={live}
-        onSearchToggle={() => {
+      <SnapMapHeader
+        shopCount={shops.length}
+        onMenuClick={() => { setPanelOpen(true); setActiveTab("explore"); }}
+        onSearchClick={() => {
           setSearchOpen((o) => !o);
-          if (!searchOpen) handleTabChange("explore");
+          if (!searchOpen) { setPanelOpen(true); setActiveTab("explore"); }
         }}
         searchOpen={searchOpen}
-        isDesktop={isDesktop}
       />
 
       {searchOpen && (
-        <div className="absolute top-[7.5rem] left-4 right-4 z-30 md:left-auto md:right-4 md:w-80">
+        <div className="absolute top-[4.5rem] left-4 right-4 z-30 md:left-auto md:right-4 md:w-80">
           <input
             autoFocus
             type="search"
             placeholder="Search locations..."
             value={filters.search}
             onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
-            className="w-full ios-blur-strong rounded-ios-lg border border-ios-separator px-4 py-3 text-[15px] text-ios-label placeholder:text-ios-tertiary focus:outline-none focus:ring-2 focus:ring-ios-blue/30"
+            className="w-full snap-glass-strong rounded-ios-lg px-4 py-3 text-[15px] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-snap-lime/50"
           />
         </div>
       )}
 
-      {showPills && <InsightPillStrip stats={stats} live={live} />}
-      {showMobileStats && <StatsFab stats={stats} live={live} />}
+      <MapFloatingControls
+        onLocate={() => mapRef.current?.locate()}
+        onZoomIn={() => mapRef.current?.zoomIn()}
+        onZoomOut={() => mapRef.current?.zoomOut()}
+        onToggleLayers={() => { handleToggleLayers(); handleToggleMapStyle(); }}
+        layersActive={layersActive || mapStyleMode === "streets"}
+      />
+
+      {isDesktop && activeTab === "map" && !panelOpen && (
+        <InsightPillStrip stats={stats} live={live} />
+      )}
 
       <InsightsRail
         insights={insights}
@@ -172,8 +217,8 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
       />
 
       {isDesktop && activeTab === "routes" && (
-        <aside className="absolute right-3 top-20 bottom-6 z-30 w-80 glass-panel-strong rounded-2xl border border-border overflow-y-auto scrollbar-thin p-4 hidden md:block grunge-pattern">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Route Optimizer</h2>
+        <aside className="absolute right-3 top-24 bottom-24 z-30 w-80 snap-glass-strong rounded-ios-lg overflow-y-auto scrollbar-thin p-4 hidden md:block texture-grain relative">
+          <h2 className="text-xs font-bold uppercase tracking-widest text-gray-600 mb-4">Route Optimizer</h2>
           <RouteBuilder
             mode={routeMode}
             onModeChange={setRouteMode}
@@ -239,12 +284,6 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
           />
         )}
       </PanelSheet>
-
-      <BottomNav
-        active={activeTab}
-        onChange={handleTabChange}
-        routeCount={selectedShopIds.size}
-      />
     </div>
   );
 }
