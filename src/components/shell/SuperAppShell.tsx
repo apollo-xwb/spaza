@@ -118,7 +118,7 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
   const showMobileStats = showPills && !isDesktop;
 
   return (
-    <div className="relative h-[100dvh] w-full overflow-hidden bg-surface map-texture">
+    <div className="relative h-[100dvh] w-full overflow-hidden bg-ios-bg">
       <MapCanvas
         ref={mapRef}
         shops={visibleShops}
@@ -149,14 +149,14 @@ export default function SuperAppShell({ shops, summaries, insights }: Props) {
       />
 
       {searchOpen && (
-        <div className="absolute top-16 left-3 right-3 z-30 md:left-auto md:right-4 md:w-80">
+        <div className="absolute top-[7.5rem] left-4 right-4 z-30 md:left-auto md:right-4 md:w-80">
           <input
             autoFocus
             type="search"
             placeholder="Search locations..."
             value={filters.search}
             onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
-            className="w-full glass-panel-strong rounded-xl border border-accent-teal/30 px-4 py-3 text-sm text-primary placeholder:text-muted focus:outline-none focus:border-accent-teal"
+            className="w-full ios-blur-strong rounded-ios-lg border border-ios-separator px-4 py-3 text-[15px] text-ios-label placeholder:text-ios-tertiary focus:outline-none focus:ring-2 focus:ring-ios-blue/30"
           />
         </div>
       )}

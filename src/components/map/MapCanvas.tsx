@@ -7,7 +7,7 @@ import { getCategoryColor, TIER_COLORS } from "@/lib/utils";
 import { shopsToGeoJSON } from "@/lib/shop-data";
 import { createBlipElement } from "@/components/map/BlipMarker";
 
-const MAP_STYLE = "https://tiles.openfreemap.org/styles/bright";
+import { MAP_STYLE } from "@/lib/map-style";
 const BLIP_ZOOM_DESKTOP = 11;
 const BLIP_ZOOM_MOBILE = 9;
 const BLIP_LIMIT_DESKTOP = 200;
@@ -61,6 +61,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [mapError, setMapError] = useState<string | null>(null);
   const markersRef = useRef<maplibregl.Marker[]>([]);
   const shopsRef = useRef(shops);
   shopsRef.current = shops;
@@ -135,6 +136,18 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       style: MAP_STYLE,
       center: [25.5, -29.5],
       zoom: 5,
+      maxZoom: 18,
+    });
+
+    map.on("error", (e) => {
+      console.error("Map error:", e.error?.message ?? e);
+      setMapError("Map tiles failed to load. Retrying...");
+    });
+
+    map.on("data", (e) => {
+      if (e.dataType === "source" && e.sourceId === "carto" && e.isSourceLoaded) {
+        setMapError(null);
+      }
     });
 
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
@@ -162,10 +175,10 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
           "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 5, 0.5, 12, 2],
           "heatmap-color": [
             "interpolate", ["linear"], ["heatmap-density"],
-            0, "rgba(13,148,136,0)",
-            0.3, "rgba(13,148,136,0.35)",
-            0.6, "rgba(231,138,62,0.55)",
-            1, "rgba(231,138,62,0.85)",
+            0, "rgba(0,122,255,0)",
+            0.3, "rgba(0,122,255,0.35)",
+            0.6, "rgba(255,149,0,0.55)",
+            1, "rgba(255,149,0,0.85)",
           ],
           "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 5, 15, 12, 30],
           "heatmap-opacity": 0.65,
@@ -178,10 +191,10 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         source: "shops",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": ["step", ["get", "point_count"], "rgba(13,148,136,0.55)", 50, "rgba(13,148,136,0.7)", 200, "rgba(231,138,62,0.8)"],
+          "circle-color": ["step", ["get", "point_count"], "rgba(0,122,255,0.55)", 50, "rgba(0,122,255,0.7)", 200, "rgba(255,149,0,0.8)"],
           "circle-radius": ["step", ["get", "point_count"], 20, 50, 28, 200, 36],
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#0D9488",
+          "circle-stroke-color": "#007AFF",
           "circle-blur": 0.1,
         },
       });
@@ -208,7 +221,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
           "circle-color": ["get", "color"],
           "circle-radius": ["interpolate", ["linear"], ["get", "activations"], 1, 5, 10, 8, 20, 11],
           "circle-stroke-width": ["case", ["==", ["get", "selected"], true], 3, 1.5],
-          "circle-stroke-color": ["case", ["==", ["get", "selected"], true], "#0D9488", "rgba(255,255,255,0.9)"],
+          "circle-stroke-color": ["case", ["==", ["get", "selected"], true], "#007AFF", "rgba(255,255,255,0.9)"],
           "circle-opacity": 0.92,
         },
       });
@@ -217,12 +230,12 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       map.addLayer({
         id: "route-glow", type: "line", source: "route",
         layout: { "line-join": "round", "line-cap": "round" },
-        paint: { "line-color": "#E78A3E", "line-width": 8, "line-blur": 4, "line-opacity": 0.35 },
+        paint: { "line-color": "#FF9500", "line-width": 8, "line-blur": 4, "line-opacity": 0.35 },
       });
       map.addLayer({
         id: "route-line", type: "line", source: "route",
         layout: { "line-join": "round", "line-cap": "round" },
-        paint: { "line-color": "#E78A3E", "line-width": 3, "line-dasharray": [2, 1] },
+        paint: { "line-color": "#FF9500", "line-width": 3, "line-dasharray": [2, 1] },
       });
 
       map.addSource("selection-radar", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
@@ -230,9 +243,9 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         id: "selection-radar-ring", type: "circle", source: "selection-radar",
         paint: {
           "circle-radius": 45,
-          "circle-color": "rgba(13,148,136,0.1)",
+          "circle-color": "rgba(0,122,255,0.1)",
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#0D9488",
+          "circle-stroke-color": "#007AFF",
           "circle-opacity": 0.75,
         },
       });
@@ -242,10 +255,10 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
         id: "opportunity-circles", type: "circle", source: "opportunity",
         layout: { visibility: showOpportunity ? "visible" : "none" },
         paint: {
-          "circle-color": "rgba(231,138,62,0.2)",
+          "circle-color": "rgba(255,149,0,0.2)",
           "circle-radius": 30,
           "circle-stroke-width": 1.5,
-          "circle-stroke-color": "rgba(231,138,62,0.55)",
+          "circle-stroke-color": "rgba(255,149,0,0.55)",
         },
       });
 
@@ -253,7 +266,7 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
       map.addLayer({
         id: "depot-marker", type: "circle", source: "depot",
         paint: {
-          "circle-color": "#E78A3E",
+          "circle-color": "#FF9500",
           "circle-radius": 12,
           "circle-stroke-width": 3,
           "circle-stroke-color": "#ffffff",
@@ -428,7 +441,16 @@ const MapCanvas = forwardRef<MapCanvasHandle, MapCanvasProps>(function MapCanvas
     }
   }, [opportunityZones, showOpportunity]);
 
-  return <div ref={containerRef} className="absolute inset-0 w-full h-full" />;
+  return (
+    <div className="absolute inset-0 w-full h-full">
+      <div ref={containerRef} className="absolute inset-0 w-full h-full" />
+      {mapError && (
+        <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 ios-card px-4 py-3 text-sm text-muted">
+          {mapError}
+        </div>
+      )}
+    </div>
+  );
 });
 
 export default MapCanvas;

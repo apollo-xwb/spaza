@@ -5,13 +5,21 @@
 @tailwind utilities;
 
 :root {
-  --surface: #f8f7f4;
-  --surface-elevated: rgba(255, 255, 255, 0.72);
-  --text-primary: #18181b;
-  --text-muted: rgba(24, 24, 27, 0.55);
-  --accent: #e78a3e;
-  --accent-teal: #0d9488;
-  --border: rgba(0, 0, 0, 0.08);
+  --ios-bg: #f2f2f7;
+  --ios-card: #ffffff;
+  --ios-separator: rgba(60, 60, 67, 0.12);
+  --ios-label: #000000;
+  --ios-secondary: rgba(60, 60, 67, 0.6);
+  --ios-tertiary: rgba(60, 60, 67, 0.3);
+  --ios-blue: #007aff;
+  --ios-green: #34c759;
+  --ios-orange: #ff9500;
+  --ios-red: #ff3b30;
+  --ios-purple: #af52de;
+  --ios-teal: #5ac8fa;
+  --ios-fill: rgba(120, 120, 128, 0.12);
+  --ios-radius: 14px;
+  --ios-radius-lg: 20px;
 }
 
 * {
@@ -23,80 +31,113 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background: var(--surface);
-  color: var(--text-primary);
+  background: var(--ios-bg);
+  color: var(--ios-label);
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* iOS card */
+.ios-card {
+  background: var(--ios-card);
+  border-radius: var(--ios-radius-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.ios-card-inset {
+  background: var(--ios-fill);
+  border-radius: var(--ios-radius);
+}
+
+/* iOS frosted glass */
+.ios-blur {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.ios-blur-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+}
+
+/* Legacy aliases mapped to iOS */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  @apply ios-blur;
+  border: 0.5px solid var(--ios-separator);
+  border-radius: var(--ios-radius-lg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .glass-panel-strong {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  @apply ios-blur-strong;
+  border: 0.5px solid var(--ios-separator);
+  border-radius: var(--ios-radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .glass-fab {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  @apply ios-blur-strong;
+  border: 0.5px solid var(--ios-separator);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-details > summary {
-  list-style: none;
+/* iOS segmented control */
+.ios-segmented {
+  display: flex;
+  background: var(--ios-fill);
+  border-radius: 10px;
+  padding: 2px;
 }
 
-details > summary::-webkit-details-marker {
-  display: none;
+.ios-segment {
+  flex: 1;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--ios-secondary);
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-.glow-accent {
-  box-shadow: 0 0 24px rgba(231, 138, 62, 0.25);
+.ios-segment-active {
+  background: var(--ios-card);
+  color: var(--ios-label);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
-.glow-teal {
-  box-shadow: 0 0 24px rgba(13, 148, 136, 0.2);
+/* iOS list row */
+.ios-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 0.5px solid var(--ios-separator);
 }
 
-.grunge-pattern {
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.015) 2px,
-      rgba(0, 0, 0, 0.015) 4px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.01) 2px,
-      rgba(0, 0, 0, 0.01) 4px
-    );
+.ios-row:last-child {
+  border-bottom: none;
 }
 
-.map-texture::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.35;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 180px 180px;
+/* iOS large title */
+.ios-large-title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.ios-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ios-secondary);
 }
 
 .pt-safe-top {
@@ -108,16 +149,11 @@ details > summary::-webkit-details-marker {
 }
 
 .scrollbar-thin::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+  width: 0;
+  height: 0;
 }
 
-.scrollbar-thin::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-/* Blip markers — light map */
+/* Blip markers */
 .blip-marker {
   cursor: pointer;
   touch-action: manipulation;
@@ -134,7 +170,7 @@ details > summary::-webkit-details-marker {
   position: absolute;
   inset: -8px;
   border-radius: 50%;
-  border: 2px solid var(--accent-teal);
+  border: 2px solid var(--ios-blue);
   animation: blipPulse 2s ease-out infinite;
   pointer-events: none;
 }
@@ -153,25 +189,25 @@ details > summary::-webkit-details-marker {
   align-items: center;
   justify-content: center;
   border: 2.5px solid #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.06);
-  transition: transform 0.15s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .blip-marker:active .blip-core,
 .blip-inner:active .blip-core {
-  transform: scale(1.15);
+  transform: scale(1.12);
 }
 
 .blip-selected .blip-core {
-  border-color: var(--accent-teal);
+  border-color: var(--ios-blue);
   border-width: 3px;
-  transform: scale(1.2);
-  box-shadow: 0 0 16px rgba(13, 148, 136, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.18);
+  box-shadow: 0 0 20px rgba(0, 122, 255, 0.45);
 }
 
 .blip-route .blip-core {
-  border-color: var(--accent);
-  box-shadow: 0 0 12px rgba(231, 138, 62, 0.45);
+  border-color: var(--ios-orange);
+  box-shadow: 0 0 14px rgba(255, 149, 0, 0.5);
 }
 
 .blip-count {
@@ -179,7 +215,6 @@ details > summary::-webkit-details-marker {
   font-weight: 700;
   color: #000;
   line-height: 1;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
 }
 
 @keyframes blipPulse {
@@ -198,40 +233,67 @@ details > summary::-webkit-details-marker {
 }
 
 .animate-slide-up {
-  animation: slideUp 0.3s ease-out;
+  animation: slideUp 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.25s ease-out;
+  animation: slideInRight 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+/* Map controls */
 .maplibregl-ctrl-logo,
 .maplibregl-ctrl-attrib {
-  opacity: 0.5;
+  opacity: 0.45;
   font-size: 9px;
 }
 
 .maplibregl-ctrl-group {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border: 0.5px solid var(--ios-separator) !important;
   border-radius: 12px !important;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
 }
 
 .maplibregl-ctrl-group button {
   background: transparent !important;
-  border-color: var(--border) !important;
-}
-
-.maplibregl-ctrl-group button span {
-  filter: none;
+  border-color: var(--ios-separator) !important;
 }
 
 @media (max-width: 767px) {
   .maplibregl-ctrl-bottom-right {
-    bottom: calc(5rem + env(safe-area-inset-bottom)) !important;
+    bottom: calc(5.5rem + env(safe-area-inset-bottom)) !important;
   }
+}
+
+/* Dashboard charts */
+.donut-chart {
+  border-radius: 50%;
+  position: relative;
+}
+
+.donut-hole {
+  position: absolute;
+  inset: 22%;
+  background: var(--ios-card);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bar-track {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--ios-fill);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 }

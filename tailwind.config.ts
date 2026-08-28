@@ -9,31 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: {
-          DEFAULT: "#F8F7F4",
-          elevated: "rgba(255,255,255,0.72)",
+        ios: {
+          bg: "#F2F2F7",
+          card: "#FFFFFF",
+          blue: "#007AFF",
+          green: "#34C759",
+          orange: "#FF9500",
+          red: "#FF3B30",
+          purple: "#AF52DE",
+          teal: "#5AC8FA",
+          label: "#000000",
+          secondary: "rgba(60,60,67,0.6)",
+          tertiary: "rgba(60,60,67,0.3)",
+          fill: "rgba(120,120,128,0.12)",
+          separator: "rgba(60,60,67,0.12)",
         },
-        primary: "#18181B",
-        muted: "rgba(24,24,27,0.55)",
-        accent: {
-          DEFAULT: "#E78A3E",
-          teal: "#0D9488",
-        },
-        border: "rgba(0,0,0,0.08)",
-        hud: {
-          bg: "#F8F7F4",
-          panel: "#FFFFFF",
-          cyan: "#0D9488",
-          amber: "#E78A3E",
-          glass: "rgba(255,255,255,0.65)",
-        },
+        surface: { DEFAULT: "#F2F2F7", elevated: "#FFFFFF" },
+        primary: "#000000",
+        muted: "rgba(60,60,67,0.6)",
+        accent: { DEFAULT: "#007AFF", teal: "#5AC8FA", orange: "#FF9500" },
+        border: "rgba(60,60,67,0.12)",
+      },
+      borderRadius: {
+        ios: "14px",
+        "ios-lg": "20px",
       },
       fontFamily: {
-        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+        sans: ["var(--font-dm-sans)", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
       },
-      screens: {
-        md: "768px",
-      },
+      screens: { md: "768px" },
     },
   },
   plugins: [],

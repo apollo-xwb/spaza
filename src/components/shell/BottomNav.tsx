@@ -17,28 +17,27 @@ interface BottomNavProps {
 
 export default function BottomNav({ active, onChange, routeCount = 0 }: BottomNavProps) {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 glass-panel-strong border-t border-border pb-safe-bottom md:hidden">
-      <div className="flex items-stretch justify-around px-1 pt-1">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 ios-blur-strong border-t border-ios-separator pb-safe-bottom md:hidden">
+      <div className="flex items-stretch justify-around px-2 pt-1">
         {TABS.map((tab) => {
           const isActive = active === tab.id;
           return (
             <button
               key={tab.id}
               onClick={() => onChange(tab.id)}
-              className={`relative flex flex-1 flex-col items-center gap-0.5 py-2 transition ${
-                isActive ? "text-accent-teal" : "text-muted"
+              className={`relative flex flex-1 flex-col items-center gap-0.5 py-2 transition active:scale-95 ${
+                isActive ? "text-ios-blue" : "text-ios-secondary"
               }`}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                 <path d={tab.icon} />
               </svg>
               <span className="text-[10px] font-medium">{tab.label}</span>
               {tab.id === "routes" && routeCount > 0 && (
-                <span className="absolute right-1/4 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[9px] font-bold text-black">
+                <span className="absolute right-1/4 top-0.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-ios-red px-1 text-[10px] font-bold text-white">
                   {routeCount}
                 </span>
               )}
-              {isActive && <span className="absolute -top-1 h-0.5 w-8 rounded-full bg-accent-teal" />}
             </button>
           );
         })}
