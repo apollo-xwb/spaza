@@ -1,0 +1,369 @@
+{
+  "nationalTamZar": 10547600,
+  "valuePerActivation": 350,
+  "concentrationIndex": 20,
+  "dataConfidence": 95,
+  "whiteSpacePct": 34,
+  "tierDistribution": {
+    "low": 1526,
+    "medium": 1346,
+    "high": 2118,
+    "elite": 1937
+  },
+  "byProvince": [
+    {
+      "province": "Northern Cape",
+      "tamZar": 1486100,
+      "shopCount": 957,
+      "avgActivations": 4.436781609195402,
+      "growthPotential": 60,
+      "dataConfidence": 95
+    },
+    {
+      "province": "Limpopo",
+      "tamZar": 1482250,
+      "shopCount": 985,
+      "avgActivations": 4.299492385786802,
+      "growthPotential": 57,
+      "dataConfidence": 94
+    },
+    {
+      "province": "Mpumalanga",
+      "tamZar": 1446550,
+      "shopCount": 929,
+      "avgActivations": 4.448869752421959,
+      "growthPotential": 61,
+      "dataConfidence": 97
+    },
+    {
+      "province": "Free State",
+      "tamZar": 1446200,
+      "shopCount": 970,
+      "avgActivations": 4.25979381443299,
+      "growthPotential": 58,
+      "dataConfidence": 95
+    },
+    {
+      "province": "North West",
+      "tamZar": 1403850,
+      "shopCount": 968,
+      "avgActivations": 4.143595041322314,
+      "growthPotential": 56,
+      "dataConfidence": 98
+    },
+    {
+      "province": "Gauteng",
+      "tamZar": 1374800,
+      "shopCount": 894,
+      "avgActivations": 4.3937360178970915,
+      "growthPotential": 59,
+      "dataConfidence": 92
+    },
+    {
+      "province": "KwaZulu-Natal",
+      "tamZar": 1073450,
+      "shopCount": 721,
+      "avgActivations": 4.253814147018031,
+      "growthPotential": 54,
+      "dataConfidence": 95
+    },
+    {
+      "province": "Western Cape",
+      "tamZar": 564200,
+      "shopCount": 337,
+      "avgActivations": 4.783382789317508,
+      "growthPotential": 63,
+      "dataConfidence": 99
+    },
+    {
+      "province": "Eastern Cape",
+      "tamZar": 270200,
+      "shopCount": 166,
+      "avgActivations": 4.650602409638554,
+      "growthPotential": 64,
+      "dataConfidence": 88
+    }
+  ],
+  "opportunityZones": [
+    {
+      "suburb": "flaagte",
+      "city": "BloemfonteinTur",
+      "province": "Free State",
+      "shopCount": 23,
+      "avgActivations": 2.608695652173913,
+      "opportunityScore": 55,
+      "lat": -29.184692330434785,
+      "lng": 6.261726498459537
+    },
+    {
+      "suburb": "ustenburgRustenburg Ward 18",
+      "city": "R",
+      "province": "North West",
+      "shopCount": 32,
+      "avgActivations": 3.34375,
+      "opportunityScore": 53,
+      "lat": -25.64416002437499,
+      "lng": 7.253020883476649
+    },
+    {
+      "suburb": "teve Tshwete Local MunicipalitySteve Tshwete Ward 1",
+      "city": "S",
+      "province": "Mpumalanga",
+      "shopCount": 18,
+      "avgActivations": 2.2222222222222223,
+      "opportunityScore": 50,
+      "lat": -26.13311577333333,
+      "lng": 9.735940561812052
+    },
+    {
+      "suburb": "pingtonnKhara Hais Ward 13",
+      "city": "U",
+      "province": "Northern Cape",
+      "shopCount": 26,
+      "avgActivations": 3.269230769230769,
+      "opportunityScore": 45,
+      "lat": -28.4366316776923,
+      "lng": 1.209655033465661
+    },
+    {
+      "suburb": "otchefstroomTlokwe Ward 1",
+      "city": "P",
+      "province": "North West",
+      "shopCount": 19,
+      "avgActivations": 2.8421052631578947,
+      "opportunityScore": 41,
+      "lat": -26.75071110105263,
+      "lng": 7.010260783278139
+    },
+    {
+      "suburb": "ewcastle Local MunicipalityNewcastle Ward 20",
+      "city": "N",
+      "province": "KwaZulu-Natal",
+      "shopCount": 20,
+      "avgActivations": 2.95,
+      "opportunityScore": 41,
+      "lat": -27.7636359245,
+      "lng": 0.013724852940794851
+    },
+    {
+      "suburb": "ikgatlong Local MunicipalityDikgatlong Ward 3",
+      "city": "D",
+      "province": "Northern Cape",
+      "shopCount": 16,
+      "avgActivations": 2.8125,
+      "opportunityScore": 35,
+      "lat": -28.5347173125,
+      "lng": 4.505630850312994
+    },
+    {
+      "suburb": "otchefstroomTlokwe Ward 20",
+      "city": "P",
+      "province": "North West",
+      "shopCount": 17,
+      "avgActivations": 2.9411764705882355,
+      "opportunityScore": 35,
+      "lat": -26.745167709411767,
+      "lng": 7.0081058867501085
+    },
+    {
+      "suburb": "reater Tubatse Local MunicipalityGreater Tubatse Ward 28",
+      "city": "G",
+      "province": "Limpopo",
+      "shopCount": 24,
+      "avgActivations": 3.625,
+      "opportunityScore": 33,
+      "lat": -24.873300736666664,
+      "lng": 9.978679479204619
+    },
+    {
+      "suburb": "BloemfonteinSonskyn",
+      "city": "BloemfonteinSonskyn",
+      "province": "Free State",
+      "shopCount": 17,
+      "avgActivations": 3.0588235294117645,
+      "opportunityScore": 33,
+      "lat": -29.165501722352946,
+      "lng": 6.272817859396311
+    },
+    {
+      "suburb": "ity of Johannesburg Metropolitan Municipality Johannesburg Ward 128",
+      "city": "C",
+      "province": "Gauteng",
+      "shopCount": 14,
+      "avgActivations": 2.642857142857143,
+      "opportunityScore": 33,
+      "lat": -26.19232228000001,
+      "lng": 7.803684784590727
+    },
+    {
+      "suburb": "pingtonnKhara Hais Ward 6",
+      "city": "U",
+      "province": "Northern Cape",
+      "shopCount": 15,
+      "avgActivations": 2.933333333333333,
+      "opportunityScore": 31,
+      "lat": -28.438270100000008,
+      "lng": 1.2180260718110385
+    },
+    {
+      "suburb": "sukaligwaMsukaligwa Ward 9",
+      "city": "M",
+      "province": "Mpumalanga",
+      "shopCount": 12,
+      "avgActivations": 2.4166666666666665,
+      "opportunityScore": 31,
+      "lat": -26.488203789999996,
+      "lng": 9.951086870064225
+    },
+    {
+      "suburb": "lokwe Local MunicipalityTlokwe Ward 15",
+      "city": "T",
+      "province": "North West",
+      "shopCount": 8,
+      "avgActivations": 1.125,
+      "opportunityScore": 31,
+      "lat": -26.710013239999995,
+      "lng": 7.095667672586179
+    },
+    {
+      "suburb": "RustenburgTlhabane",
+      "city": "RustenburgTlhabane",
+      "province": "North West",
+      "shopCount": 14,
+      "avgActivations": 2.7857142857142856,
+      "opportunityScore": 31,
+      "lat": -25.643494488571427,
+      "lng": 7.218738916396542
+    },
+    {
+      "suburb": "ihlabeng Local MunicipalityDihlabeng Ward 5",
+      "city": "D",
+      "province": "Free State",
+      "shopCount": 11,
+      "avgActivations": 2.272727272727273,
+      "opportunityScore": 30,
+      "lat": -28.19607511818182,
+      "lng": 8.33208788448457
+    },
+    {
+      "suburb": "loemfonteinMangaung Ward 16",
+      "city": "B",
+      "province": "Free State",
+      "shopCount": 15,
+      "avgActivations": 3,
+      "opportunityScore": 30,
+      "lat": -29.144251650666668,
+      "lng": 6.2515887477207075
+    },
+    {
+      "suburb": "abelo-K",
+      "city": "BotshabeloBotsh",
+      "province": "Free State",
+      "shopCount": 12,
+      "avgActivations": 2.6666666666666665,
+      "opportunityScore": 28,
+      "lat": -29.209808250000005,
+      "lng": 6.684622328455948
+    },
+    {
+      "suburb": "otchefstroomTlokwe Ward 19",
+      "city": "P",
+      "province": "North West",
+      "shopCount": 7,
+      "avgActivations": 1.1428571428571428,
+      "opportunityScore": 27,
+      "lat": -26.739218685714288,
+      "lng": 7.035139745373499
+    },
+    {
+      "suburb": "ngquza Hill Local MunicipalityIngquza Hill Ward 15",
+      "city": "I",
+      "province": "Eastern Cape",
+      "shopCount": 15,
+      "avgActivations": 3.2666666666666666,
+      "opportunityScore": 26,
+      "lat": -31.363155752,
+      "lng": 9.573679841453679
+    }
+  ],
+  "categoryLeaders": [
+    {
+      "category": "Services",
+      "count": 7,
+      "avgActivations": 5.142857142857143,
+      "indexScore": 118
+    },
+    {
+      "category": "Tavern & Bar",
+      "count": 44,
+      "avgActivations": 4.75,
+      "indexScore": 109
+    },
+    {
+      "category": "Construction",
+      "count": 8,
+      "avgActivations": 4.625,
+      "indexScore": 106
+    },
+    {
+      "category": "Hair & Beauty",
+      "count": 704,
+      "avgActivations": 4.495738636363637,
+      "indexScore": 103
+    },
+    {
+      "category": "Fast Food",
+      "count": 311,
+      "avgActivations": 4.501607717041801,
+      "indexScore": 103
+    },
+    {
+      "category": "Tuckshop",
+      "count": 1143,
+      "avgActivations": 4.3849518810148735,
+      "indexScore": 101
+    },
+    {
+      "category": "Supermarket",
+      "count": 1232,
+      "avgActivations": 4.378246753246753,
+      "indexScore": 101
+    },
+    {
+      "category": "Fresh Produce",
+      "count": 1349,
+      "avgActivations": 4.349147516679022,
+      "indexScore": 100
+    },
+    {
+      "category": "Bottle Store",
+      "count": 17,
+      "avgActivations": 4.294117647058823,
+      "indexScore": 99
+    },
+    {
+      "category": "Spaza",
+      "count": 1759,
+      "avgActivations": 4.2563956793632745,
+      "indexScore": 98
+    },
+    {
+      "category": "Other",
+      "count": 179,
+      "avgActivations": 4.156424581005586,
+      "indexScore": 96
+    },
+    {
+      "category": "Cellphone",
+      "count": 137,
+      "avgActivations": 4.109489051094891,
+      "indexScore": 94
+    },
+    {
+      "category": "Internet Cafe",
+      "count": 37,
+      "avgActivations": 4.027027027027027,
+      "indexScore": 93
+    }
+  ]
+}

@@ -20,19 +20,8 @@ const config: Config = {
       fontFamily: {
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
-      animation: {
-        pulseRing: "pulseRing 2s ease-out infinite",
-        routeFlow: "routeFlow 2s linear infinite",
-      },
-      keyframes: {
-        pulseRing: {
-          "0%": { transform: "scale(0.5)", opacity: "0.8" },
-          "100%": { transform: "scale(2.5)", opacity: "0" },
-        },
-        routeFlow: {
-          "0%": { strokeDashoffset: "0" },
-          "100%": { strokeDashoffset: "-40" },
-        },
+      screens: {
+        md: "768px",
       },
     },
   },

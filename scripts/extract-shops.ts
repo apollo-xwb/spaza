@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import pdf from "pdf-parse";
 import type { DataSummaries, Shop } from "../src/types";
+import { buildInsightsFromShops } from "../src/lib/insights-engine";
 import { getActivationTier, normalizeShopType } from "../src/lib/utils";
 
 const PDF_PATH = path.join(process.cwd(), "uploads/Top_1000_Shops_By_Province_72de.pdf");
@@ -460,13 +461,14 @@ async function main() {
   console.log(`Sample: ${shops[0].shopName} | ${shops[0].province} | ${shops[0].activations} activations`);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, "shops.json"), JSON.stringify(shops));
-  fs.writeFileSync(
-    path.join(OUT_DIR, "summaries.json"),
-    JSON.stringify(buildSummaries(shops), null, 2)
-  );
+  const summaries = buildSummaries(shops);
+  const insights = buildInsightsFromShops(shops);
 
-  console.log("Wrote public/data/shops.json and summaries.json");
+  fs.writeFileSync(path.join(OUT_DIR, "shops.json"), JSON.stringify(shops));
+  fs.writeFileSync(path.join(OUT_DIR, "summaries.json"), JSON.stringify(summaries, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, "insights.json"), JSON.stringify(insights, null, 2));
+
+  console.log("Wrote public/data/shops.json, summaries.json, and insights.json");
 }
 
 main().catch((err) => {

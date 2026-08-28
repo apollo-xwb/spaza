@@ -1,4 +1,4 @@
-@import "mapbox-gl/dist/mapbox-gl.css";
+@import "maplibre-gl/dist/maplibre-gl.css";
 
 @tailwind base;
 @tailwind components;
@@ -22,48 +22,42 @@ body {
   overflow: hidden;
   background: var(--hud-bg);
   color: #fff;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .glass-panel {
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-panel-strong {
-  background: rgba(10, 14, 20, 0.75);
+  background: rgba(10, 14, 20, 0.82);
   backdrop-filter: blur(24px);
-  border: 1px solid rgba(0, 229, 255, 0.15);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0, 229, 255, 0.12);
 }
 
 .hud-glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.2);
 }
 
 .hud-glow-amber {
-  box-shadow: 0 0 20px rgba(232, 184, 74, 0.3);
+  box-shadow: 0 0 24px rgba(232, 184, 74, 0.25);
 }
 
-.mapboxgl-ctrl-logo,
-.mapboxgl-ctrl-attrib {
-  opacity: 0.4;
+.pt-safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
-.mapboxgl-popup-content {
-  background: rgba(10, 14, 20, 0.9) !important;
-  color: #fff !important;
-  border: 1px solid rgba(0, 229, 255, 0.3) !important;
-  border-radius: 8px !important;
-  padding: 8px 12px !important;
-  font-size: 12px !important;
-}
-
-.mapboxgl-popup-tip {
-  border-top-color: rgba(10, 14, 20, 0.9) !important;
+.pb-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .scrollbar-thin::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
+  height: 3px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
@@ -71,21 +65,114 @@ body {
   border-radius: 4px;
 }
 
-@keyframes radarPulse {
-  0% {
-    transform: scale(0.3);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
+/* Blip markers */
+.blip-marker {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
-.radar-ring {
-  animation: radarPulse 2s ease-out infinite;
+.blip-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.radar-ring-delay {
-  animation: radarPulse 2s ease-out infinite 0.6s;
+.blip-pulse {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid #00e5ff;
+  animation: blipPulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+.blip-pulse-delay {
+  animation-delay: 0.7s;
+}
+
+.blip-core {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: transform 0.15s ease;
+}
+
+.blip-marker:active .blip-core,
+.blip-inner:active .blip-core {
+  transform: scale(1.15);
+}
+
+.blip-selected .blip-core {
+  border-color: #00e5ff;
+  border-width: 3px;
+  transform: scale(1.2);
+}
+
+.blip-route .blip-core {
+  border-color: #e8b84a;
+}
+
+.blip-count {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+
+@keyframes blipPulse {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.25s ease-out;
+}
+
+.maplibregl-ctrl-logo,
+.maplibregl-ctrl-attrib {
+  opacity: 0.35;
+  font-size: 9px;
+}
+
+.maplibregl-ctrl-group {
+  background: rgba(10, 14, 20, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.maplibregl-ctrl-group button {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.maplibregl-ctrl-group button span {
+  filter: invert(1);
+}
+
+@media (max-width: 767px) {
+  .maplibregl-ctrl-bottom-right {
+    bottom: calc(5rem + env(safe-area-inset-bottom)) !important;
+  }
 }

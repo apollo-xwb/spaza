@@ -1,7 +1,8 @@
 import type { OptimizedRoute, RouteMode, Shop } from "@/types";
+import { VALUE_PER_ACTIVATION } from "@/lib/insights-engine";
 import * as turf from "@turf/turf";
 
-const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN ?? "";
+const OSRM_URL = process.env.NEXT_PUBLIC_OSRM_URL ?? "https://router.project-osrm.org";
 
 interface OptimizeInput {
   mode: RouteMode;
@@ -10,13 +11,8 @@ interface OptimizeInput {
   roundtrip?: boolean;
 }
 
-function haversineKm(a: Shop, b: Shop): number {
-  return turf.distance([a.lng, a.lat], [b.lng, b.lat], { units: "kilometers" });
-}
-
 function nearestNeighborRoute(shops: Shop[], depot?: { lat: number; lng: number }): Shop[] {
   if (shops.length <= 1) return shops;
-
   const remaining = [...shops];
   const ordered: Shop[] = [];
   let current: { lat: number; lng: number } = depot ?? remaining[0];
@@ -42,7 +38,6 @@ function nearestNeighborRoute(shops: Shop[], depot?: { lat: number; lng: number 
     ordered.push(next);
     current = next;
   }
-
   return ordered;
 }
 
@@ -52,19 +47,14 @@ function buildFallbackRoute(
   depot?: { lat: number; lng: number }
 ): OptimizedRoute {
   const coordinates: [number, number][] = [];
-
   if (depot) coordinates.push([depot.lng, depot.lat]);
-  for (const shop of orderedShops) {
-    coordinates.push([shop.lng, shop.lat]);
-  }
+  for (const shop of orderedShops) coordinates.push([shop.lng, shop.lat]);
 
   let totalDistanceKm = 0;
   for (let i = 0; i < coordinates.length - 1; i++) {
-    totalDistanceKm += turf.distance(
-      turf.point(coordinates[i]),
-      turf.point(coordinates[i + 1]),
-      { units: "kilometers" }
-    );
+    totalDistanceKm += turf.distance(turf.point(coordinates[i]), turf.point(coordinates[i + 1]), {
+      units: "kilometers",
+    });
   }
 
   const totalActivations = orderedShops.reduce((s, x) => s + x.activations, 0);
@@ -79,31 +69,31 @@ function buildFallbackRoute(
       totalDistanceKm > 0
         ? Math.round((totalActivations / totalDistanceKm) * 100) / 100
         : totalActivations,
+    estimatedValueZar: totalActivations * VALUE_PER_ACTIVATION,
     source: "fallback",
   };
 }
 
-async function fetchMapboxOptimization(
+async function fetchOsrmTrip(
   coordinates: [number, number][],
   roundtrip: boolean
 ): Promise<{ coordinates: [number, number][]; distance: number; duration: number; order: number[] } | null> {
-  if (!MAPBOX_TOKEN || MAPBOX_TOKEN.includes("your_mapbox")) return null;
-  if (coordinates.length < 2) return null;
+  if (coordinates.length < 2 || coordinates.length > 50) return null;
 
   const coordStr = coordinates.map(([lng, lat]) => `${lng},${lat}`).join(";");
-  const url = `https://api.mapbox.com/optimized-trips/v1/mapbox/driving/${coordStr}?roundtrip=${roundtrip}&source=first&destination=last&geometries=geojson&overview=full&access_token=${MAPBOX_TOKEN}`;
+  const url = `${OSRM_URL}/trip/v1/driving/${coordStr}?roundtrip=${roundtrip}&source=first&destination=last&geometries=geojson&overview=full`;
 
   try {
     const res = await fetch(url);
     if (!res.ok) return null;
     const data = await res.json();
-    const trip = data.trips?.[0];
-    if (!trip) return null;
+    if (data.code !== "Ok" || !data.trips?.[0]) return null;
 
-    const order: number[] = data.waypoints
-      .map((w: { waypoint_index: number }, i: number) => ({ i, idx: w.waypoint_index }))
-      .sort((a: { idx: number }, b: { idx: number }) => a.idx - b.idx)
-      .map((w: { i: number }) => w.i);
+    const trip = data.trips[0];
+    const order: number[] = (data.waypoints as { waypoint_index: number }[])
+      .map((w, i) => ({ i, idx: w.waypoint_index }))
+      .sort((a, b) => a.idx - b.idx)
+      .map((w) => w.i);
 
     return {
       coordinates: trip.geometry.coordinates as [number, number][],
@@ -140,11 +130,11 @@ export async function optimizeRoute(input: OptimizeInput): Promise<OptimizedRout
   if (depot) waypoints.push([depot.lng, depot.lat]);
   for (const shop of ordered) waypoints.push([shop.lng, shop.lat]);
 
-  const mapboxResult = await fetchMapboxOptimization(waypoints, roundtrip);
+  const osrmResult = await fetchOsrmTrip(waypoints, roundtrip);
 
-  if (mapboxResult) {
+  if (osrmResult) {
     const shopStartIdx = depot ? 1 : 0;
-    const reorderedShops = mapboxResult.order
+    const reorderedShops = osrmResult.order
       .filter((i) => i >= shopStartIdx)
       .map((i, idx) => ({ shop: ordered[i - shopStartIdx] ?? ordered[idx], order: idx + 1 }));
 
@@ -153,14 +143,15 @@ export async function optimizeRoute(input: OptimizeInput): Promise<OptimizedRout
     return {
       mode,
       stops: reorderedShops,
-      coordinates: mapboxResult.coordinates,
-      totalDistanceKm: Math.round(mapboxResult.distance * 100) / 100,
-      totalDurationMin: Math.round(mapboxResult.duration),
+      coordinates: osrmResult.coordinates,
+      totalDistanceKm: Math.round(osrmResult.distance * 100) / 100,
+      totalDurationMin: Math.round(osrmResult.duration),
       activationYield:
-        mapboxResult.distance > 0
-          ? Math.round((totalActivations / mapboxResult.distance) * 100) / 100
+        osrmResult.distance > 0
+          ? Math.round((totalActivations / osrmResult.distance) * 100) / 100
           : totalActivations,
-      source: "mapbox",
+      estimatedValueZar: totalActivations * VALUE_PER_ACTIVATION,
+      source: "osrm",
     };
   }
 
@@ -182,13 +173,4 @@ export function exportRouteCsv(route: OptimizedRoute): string {
 
 export function exportRouteJson(route: OptimizedRoute): string {
   return JSON.stringify(route, null, 2);
-}
-
-export function estimateRouteDistance(shops: Shop[]): number {
-  if (shops.length < 2) return 0;
-  let total = 0;
-  for (let i = 0; i < shops.length - 1; i++) {
-    total += haversineKm(shops[i], shops[i + 1]);
-  }
-  return Math.round(total * 100) / 100;
 }

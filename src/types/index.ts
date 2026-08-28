@@ -1,5 +1,7 @@
 export type ActivationTier = "low" | "medium" | "high" | "elite";
 
+export type AppTab = "map" | "insights" | "routes" | "explore";
+
 export interface Shop {
   id: string;
   orderNo: number;
@@ -90,6 +92,45 @@ export interface DataSummaries {
   coverageGaps: CoverageGap[];
 }
 
+export interface OpportunityZone {
+  suburb: string;
+  city: string;
+  province: string;
+  shopCount: number;
+  avgActivations: number;
+  opportunityScore: number;
+  lat: number;
+  lng: number;
+}
+
+export interface ProvinceInsight {
+  province: string;
+  tamZar: number;
+  shopCount: number;
+  avgActivations: number;
+  growthPotential: number;
+  dataConfidence: number;
+}
+
+export interface TierDistribution {
+  low: number;
+  medium: number;
+  high: number;
+  elite: number;
+}
+
+export interface DataInsights {
+  nationalTamZar: number;
+  valuePerActivation: number;
+  concentrationIndex: number;
+  dataConfidence: number;
+  whiteSpacePct: number;
+  tierDistribution: TierDistribution;
+  byProvince: ProvinceInsight[];
+  opportunityZones: OpportunityZone[];
+  categoryLeaders: { category: string; count: number; avgActivations: number; indexScore: number }[];
+}
+
 export type RouteMode = "field_rep" | "high_value" | "distribution";
 
 export interface RouteStop {
@@ -104,7 +145,8 @@ export interface OptimizedRoute {
   totalDistanceKm: number;
   totalDurationMin: number;
   activationYield?: number;
-  source: "mapbox" | "fallback";
+  estimatedValueZar?: number;
+  source: "osrm" | "fallback";
 }
 
 export interface MapFilters {
@@ -114,6 +156,7 @@ export interface MapFilters {
   shopTypeCategory: string;
   activationTier: string;
   showHeatmap: boolean;
+  showOpportunity: boolean;
 }
 
 export interface VisibleStats {
@@ -122,4 +165,12 @@ export interface VisibleStats {
   totalActivations: number;
   avgActivations: number;
   verifiedPct: number;
+}
+
+export interface LiveInsights {
+  tamZar: number;
+  densityScore: number;
+  whiteSpacePct: number;
+  concentrationIndex: number;
+  growthPotential: number;
 }
